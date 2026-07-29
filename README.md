@@ -17,6 +17,7 @@ Start with `START_HERE_PSQ_SCO_HANDOVER.docx`. For detailed setup, file location
 - `DATA_AVAILABILITY.md` - what data is included, why unverified third-party corpora are not published, and how to rebuild an authorized RAG corpus.
 - `EXCLUSIONS_AND_REBUILD.md` - what was intentionally omitted and how to restore it.
 - `LICENSE_AND_DATA_NOTICE.md` - redistribution and third-party data cautions.
+- `GITHUB_UPLOAD_COMMANDS.md` - access, login, synchronization, upload, and post-push verification commands.
 - `MANIFEST.csv` and `CHECKSUMS_SHA256.txt` - package inventory and integrity checks.
 
 ## First setup
