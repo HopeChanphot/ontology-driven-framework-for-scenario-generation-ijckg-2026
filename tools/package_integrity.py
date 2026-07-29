@@ -47,6 +47,7 @@ def generate() -> int:
         writer = csv.DictWriter(
             handle,
             fieldnames=("relative_path", "category", "extension", "size_bytes", "sha256"),
+            lineterminator="\n",
         )
         writer.writeheader()
         for path in payload_files:
