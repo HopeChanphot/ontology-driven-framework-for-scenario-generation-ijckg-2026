@@ -1,0 +1,36 @@
+PREFIX psq: <http://personashield.ait.ac.th/ontology/psq-sco#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+# CQ2 - Cybersecurity Structure
+SELECT DISTINCT ?template ?category ?concept ?conceptLabel
+WHERE {
+  VALUES ?template { psq:TPL_SMS_BankLink_Introductory }
+  {
+    ?template psq:usesChannel ?concept . BIND("channel" AS ?category)
+  } UNION {
+    ?template psq:hasVariant ?concept . BIND("variant" AS ?category)
+  } UNION {
+    ?template psq:representsAttackType ?concept . BIND("attack_type" AS ?category)
+  } UNION {
+    ?template psq:hasThreatAction ?concept . BIND("threat_action" AS ?category)
+  } UNION {
+    ?template psq:hasRedFlag ?concept . BIND("red_flag" AS ?category)
+  } UNION {
+    ?template psq:hasSafeIndicator ?concept . BIND("safe_indicator" AS ?category)
+  } UNION {
+    ?template psq:usesPersuasionCue ?concept . BIND("persuasion_cue" AS ?category)
+  } UNION {
+    ?template psq:implementsTechnique ?concept . BIND("attack_technique" AS ?category)
+  } UNION {
+    ?template psq:mapsToCAPEC ?concept . BIND("capec_pattern" AS ?category)
+  } UNION {
+    ?template psq:hasSafeResponse ?concept . BIND("safe_response" AS ?category)
+  } UNION {
+    ?template psq:hasLegalConsequence ?concept . BIND("legal_consequence" AS ?category)
+  }
+  OPTIONAL { ?concept rdfs:label ?conceptLabel }
+}
+ORDER BY ?category ?concept

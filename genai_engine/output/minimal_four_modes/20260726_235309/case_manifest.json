@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "case_set_id": "single_cli_selection",
+    "case_count": 1,
+    "modes_to_compare": [
+      "prompt_rag",
+      "ontology_prompt_rag"
+    ],
+    "outputs_for_selected_modes": 2,
+    "outputs_when_mode_both": 2,
+    "outputs_when_mode_three_mode": 3,
+    "counts_by_role": {
+      "HR": 1
+    },
+    "counts_by_channel": {
+      "email": 1
+    },
+    "counts_by_variant": {
+      "fake": 1
+    },
+    "counts_by_difficulty_condition": {
+      "cli_selected": 1
+    },
+    "counts_by_age_group": {
+      "22_35": 1
+    },
+    "counts_by_stage": {
+      "BEGINNER_INTRODUCTORY": 1
+    },
+    "rationale": "Single CLI-selected generation case.",
+    "total_formula": "1 selected case(s)"
+  },
+  "cases": [
+    {
+      "case_id": "SINGLE-001",
+      "case_set_id": "single_cli_selection",
+      "group_id": "SINGLE_HR_email_fake",
+      "group_index": 1,
+      "case_index": 1,
+      "role": "HR",
+      "channel": "email",
+      "variant": "fake",
+      "difficulty_condition": "cli_selected",
+      "stage_id": "BEGINNER_INTRODUCTORY",
+      "macro_stage": "Beginner",
+      "micro_stage": "Introductory",
+      "stage_index": 1,
+      "difficulty_band": "easy",
+      "age_group_code": "22_35",
+      "age_group_label": "22–35",
+      "retrieval_mode": "ENGLISH_GLOBAL",
+      "language_mode": "en",
+      "modes_to_compare": [
+        "prompt_only",
+        "prompt_rag",
+        "ontology_prompt_rag",
+        "ontology_text_rag"
+      ],
+      "rationale": "Single CLI-selected generation case."
+    }
+  ]
+}

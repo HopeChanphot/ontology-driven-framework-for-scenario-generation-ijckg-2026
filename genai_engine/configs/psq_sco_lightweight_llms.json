@@ -1,0 +1,113 @@
+{
+  "purpose": "Local lightweight open-weight model profiles for the separate PSQ-SCO scenario generation engine.",
+  "default_model": "qwen2_5_7b",
+  "installed_models_detected_from_local_ollama_cache": [
+    "qwen2.5:7b-instruct",
+    "qwen3:8b",
+    "mistral:7b",
+    "phi3:mini"
+  ],
+  "recommended_three_model_rotation": [
+    "qwen2_5_7b",
+    "qwen3_8b",
+    "mistral_7b"
+  ],
+  "fallback_model": "phi3_mini",
+  "generation_modes": {
+    "prompt_only": {
+      "purpose": "Prompt-engineered baseline without RAG or ontology grounding.",
+      "recommended_for": "Baseline comparison and fast debugging."
+    },
+    "prompt_rag": {
+      "purpose": "Existing prompt template plus retrieved examples from the project RAG corpus.",
+      "recommended_for": "Baseline retrieval-guided generation."
+    },
+    "ontology_text_rag": {
+      "purpose": "Existing prompt+RAG plus PSQ-SCO OWL records transformed into graph-to-text RAG documents.",
+      "recommended_for": "Main three-mode comparison: prompt_only vs prompt_rag vs ontology_text_rag."
+    },
+    "ontology_prompt_rag": {
+      "purpose": "Legacy ontology semantic-packet mode kept for backward-compatible experiments.",
+      "recommended_for": "Earlier two-mode comparison: prompt_rag vs ontology_prompt_rag."
+    }
+  },
+  "mode_aliases": {
+    "both": [
+      "prompt_rag",
+      "ontology_prompt_rag"
+    ],
+    "three_mode": [
+      "prompt_only",
+      "prompt_rag",
+      "ontology_text_rag"
+    ],
+    "all_modes": [
+      "prompt_only",
+      "prompt_rag",
+      "ontology_prompt_rag",
+      "ontology_text_rag"
+    ]
+  },
+  "ontology_text_rag": {
+    "source_ontology": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\ontology\\personashield-psq-sco-v9.1.owl",
+    "transformation_methods": [
+      "record verbalization",
+      "static Graph-CoT-inspired control trace (not iterative Graph-CoT)",
+      "deterministic greedy relevance walk (legacy output label: deterministic_random_walk_graph_to_text)"
+    ],
+    "graph_cot_basis": {
+      "paper": "Graph Chain-of-Thought: Augmenting Large Language Models by Reasoning on Graphs",
+      "citation": "Jin et al., ACL 2024",
+      "url": "https://arxiv.org/abs/2404.07103",
+      "adaptation": "The engine creates a static, deterministic, auditable control trace. It does not implement the paper's iterative LLM reasoning, graph interaction, and graph execution loop."
+    },
+    "terminology_limits": {
+      "ontology_embedding": false,
+      "learned_graph_retriever": false,
+      "random_walk": false,
+      "graphrag": false,
+      "formal_selected_subgraph": false,
+      "preferred_name": "ontology-to-text retrieval with deterministic record ranking and an optional greedy relation walk"
+    },
+    "default_document_limit_per_scenario": 5,
+    "writes_generation_meta": [
+      "ontology_text_trace",
+      "rag_trace",
+      "grounding_mode=ontology_text_rag"
+    ]
+  },
+  "models": {
+    "qwen2_5_7b": {
+      "provider": "ollama",
+      "model_name": "qwen2.5:7b-instruct",
+      "role": "structured JSON and multilingual scenario generation",
+      "temperature": 0.45,
+      "max_tokens": 1900,
+      "num_ctx": 8192
+    },
+    "qwen3_8b": {
+      "provider": "ollama",
+      "model_name": "qwen3:8b",
+      "role": "reasoning and instruction-following generation",
+      "temperature": 0.45,
+      "max_tokens": 1900,
+      "num_ctx": 8192
+    },
+    "mistral_7b": {
+      "provider": "ollama",
+      "model_name": "mistral:7b",
+      "role": "concise scenario wording and fast local generation",
+      "temperature": 0.50,
+      "max_tokens": 1700,
+      "num_ctx": 4096
+    },
+    "phi3_mini": {
+      "provider": "ollama",
+      "model_name": "phi3:mini",
+      "role": "low-spec fallback and smoke testing",
+      "temperature": 0.40,
+      "max_tokens": 1400,
+      "num_ctx": 4096
+    }
+  }
+}

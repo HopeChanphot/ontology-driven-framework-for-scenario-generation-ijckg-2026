@@ -1,0 +1,19 @@
+PS C:\Users\user\PersonaShieldQuest-Ontology> & ".\.venv-sparql-v8.2\Scripts\python.exe" scripts\run_sparql_cq_v9_1.py --validate-
+>> cases --format json --output outputs\v9_1\sparql-cq-validation-report.json
+
+# SPARQL ASK competency-question validation
+validation_type: SPARQL ASK competency-question cases
+status: PASS
+case_count: 8
+passed_count: 8
+failed_count: 0
+
+case results:
+  CQ1-NEG-001: expected=True actual=True result=PASS
+  CQ1-POS-001: expected=True actual=True result=PASS
+  CQ2-NEG-001: expected=True actual=True result=PASS
+  CQ2-POS-001: expected=True actual=True result=PASS
+  CQ3-NEG-001: expected=True actual=True result=PASS
+  CQ3-POS-001: expected=True actual=True result=PASS
+  CQ4-NEG-001: expected=True actual=True result=PASS
+  CQ4-POS-001: expected=True actual=True result=PASS

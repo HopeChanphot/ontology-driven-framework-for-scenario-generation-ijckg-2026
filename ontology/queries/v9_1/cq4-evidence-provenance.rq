@@ -1,0 +1,36 @@
+PREFIX psq: <http://personashield.ait.ac.th/ontology/psq-sco#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+# CQ4 - Evidence and Provenance Grounding
+SELECT DISTINCT ?template ?evidencePack ?evidenceRole ?supportedElement ?elementLabel ?source ?sourceTitle ?publisher ?sourceUrl ?retrievalDate ?evidenceCategory ?verificationStatus ?licenseStatus ?dataset ?datasetLabel ?provenance ?sourceFile ?sourceRecordId
+WHERE {
+  VALUES ?template { psq:TPL_Voice_ITSupport_Advanced }
+  ?template psq:hasEvidencePack ?evidencePack ;
+            psq:hasProvenanceRecord ?provenance .
+  ?evidencePack psq:supportedBySource ?source ;
+                psq:derivedFromDataset ?dataset .
+  {
+    ?evidencePack psq:justifiesAttackClassification ?supportedElement . BIND("attack_classification" AS ?evidenceRole)
+  } UNION {
+    ?evidencePack psq:justifiesRedFlag ?supportedElement . BIND("red_flag" AS ?evidenceRole)
+  } UNION {
+    ?evidencePack psq:justifiesSafeIndicator ?supportedElement . BIND("safe_indicator" AS ?evidenceRole)
+  } UNION {
+    ?evidencePack psq:recommendsSafeResponse ?supportedElement . BIND("recommended_response" AS ?evidenceRole)
+  }
+  OPTIONAL { ?supportedElement rdfs:label ?elementLabel }
+  OPTIONAL { ?source dcterms:title ?sourceTitle }
+  OPTIONAL { ?source dcterms:publisher ?publisher }
+  OPTIONAL { ?source psq:sourceUrl ?sourceUrl }
+  OPTIONAL { ?source psq:retrievalDate ?retrievalDate }
+  OPTIONAL { ?source psq:evidenceCategory ?evidenceCategory }
+  OPTIONAL { ?source psq:verificationStatus ?verificationStatus }
+  OPTIONAL { ?source psq:licenseStatus ?licenseStatus }
+  OPTIONAL { ?dataset rdfs:label ?datasetLabel }
+  OPTIONAL { ?provenance psq:sourceFile ?sourceFile }
+  OPTIONAL { ?provenance psq:sourceRecordId ?sourceRecordId }
+}
+ORDER BY ?evidenceRole ?supportedElement ?source

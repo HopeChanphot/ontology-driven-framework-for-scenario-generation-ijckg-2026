@@ -1,0 +1,17 @@
+{
+  "docx": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\docs\\PersonaShield_Quest_PSQ_SCO_Ontology_Validation_Analysis_Report_With_Command_Screenshots.docx",
+  "opens_with_python_docx": true,
+  "paragraphs": 52,
+  "tables": 12,
+  "sections": 1,
+  "embedded_media_count": 5,
+  "has_command_screenshot_section": true,
+  "has_presentation_summary": true,
+  "has_consistency_result": true,
+  "has_unsatisfiable_classes": true,
+  "has_missing_relationships": true,
+  "has_constraint_violations": true,
+  "has_sparql_results": true,
+  "has_cq_row_counts": true,
+  "package_parts": 23
+}

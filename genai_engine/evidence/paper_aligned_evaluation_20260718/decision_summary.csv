@@ -1,0 +1,5 @@
+method,condition_number,condition_name,n,accepted_count,accepted_percentage,minor_revision_count,minor_revision_percentage,major_revision_count,major_revision_percentage,reject_regenerate_count,reject_regenerate_percentage,decision_scope
+prompt_only,1,Prompt-Only Generation,360,360,1.0,0,0.0,0,0.0,0,0.0,automated technical triage; PCUE and human approval remain required
+prompt_rag,2,Text-RAG Generation,360,360,1.0,0,0.0,0,0.0,0,0.0,automated technical triage; PCUE and human approval remain required
+ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,360,360,1.0,0,0.0,0,0.0,0,0.0,automated technical triage; PCUE and human approval remain required
+ontology_text_rag,4,Ontology-to-Text Vector RAG,360,359,0.9972222222222222,0,0.0,0,0.0,1,0.002777777777777778,automated technical triage; PCUE and human approval remain required

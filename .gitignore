@@ -216,3 +216,20 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# PersonaShield Quest local data, model, and experiment artifacts
+genai_engine/knowledge_base/raw_data/
+genai_engine/knowledge_base/prepared/
+genai_engine/chroma_db*/
+genai_engine/.hf_cache/
+genai_engine/.ollama/
+ontology/data/ontology_runtime_v9_1/
+reproduction_record/
+*.zip
+
+# Keep only the compact, reviewed reference outputs in version control.
+genai_engine/output/*
+!genai_engine/output/minimal_four_modes/
+!genai_engine/output/minimal_four_modes/**
+!genai_engine/output/minimal_four_modes_evaluation/
+!genai_engine/output/minimal_four_modes_evaluation/**

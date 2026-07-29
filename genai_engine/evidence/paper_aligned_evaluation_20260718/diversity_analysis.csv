@@ -1,0 +1,13 @@
+model_key,method,condition_number,condition_name,n,unique_fingerprint_count,unique_fingerprint_rate,unique_title_count,unique_title_rate,most_common_title,most_common_title_count
+mistral_7b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,120,120,1.0,49,0.4083333333333333,suspicious invoice change request,18
+mistral_7b,ontology_text_rag,4,Ontology-to-Text Vector RAG,120,120,1.0,55,0.4583333333333333,vendor bank detail change request,9
+mistral_7b,prompt_only,1,Prompt-Only Generation,120,120,1.0,48,0.4,suspicious leave request,15
+mistral_7b,prompt_rag,2,Text-RAG Generation,120,120,1.0,58,0.48333333333333334,suspicious leave request,10
+qwen2_5_7b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,120,120,1.0,51,0.425,suspicious email alert,13
+qwen2_5_7b,ontology_text_rag,4,Ontology-to-Text Vector RAG,120,120,1.0,96,0.8,verify unusual request,5
+qwen2_5_7b,prompt_only,1,Prompt-Only Generation,120,120,1.0,73,0.6083333333333333,verification request from external support desk,5
+qwen2_5_7b,prompt_rag,2,Text-RAG Generation,120,120,1.0,63,0.525,suspicious email alert,6
+qwen3_8b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,120,120,1.0,93,0.775,approval workflow verification,8
+qwen3_8b,ontology_text_rag,4,Ontology-to-Text Vector RAG,120,120,1.0,59,0.49166666666666664,urgent bank verification request,8
+qwen3_8b,prompt_only,1,Prompt-Only Generation,120,120,1.0,42,0.35,it operations sms verification request,4
+qwen3_8b,prompt_rag,2,Text-RAG Generation,120,120,1.0,65,0.5416666666666666,verify leave request workflow,6

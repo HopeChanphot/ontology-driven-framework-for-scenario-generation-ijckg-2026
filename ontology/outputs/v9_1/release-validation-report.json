@@ -1,0 +1,131 @@
+{
+  "version": "9.1.0",
+  "ontology": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\ontology\\personashield-psq-sco-v9.1.owl",
+  "counts": {
+    "classes": 73,
+    "object_properties": 49,
+    "data_properties": 39,
+    "annotation_properties": 17,
+    "individuals": 133
+  },
+  "triple_count": 3229,
+  "runtime": {
+    "records": 12425,
+    "files": 20
+  },
+  "removed_scope": {
+    "status": "PASS",
+    "graph_hit_count": 0,
+    "literal_hit_count": 0,
+    "graph_hits": [],
+    "literal_hits": []
+  },
+  "runtime_removed_scope": {
+    "status": "PASS",
+    "field_hit_count": 0,
+    "text_hit_count": 0,
+    "field_hits": [],
+    "text_hits": []
+  },
+  "owl_restrictions": {
+    "status": "PASS",
+    "malformed_restriction_count": 0,
+    "malformed_restrictions": []
+  },
+  "cq_select_results": [
+    {
+      "cq": "CQ1",
+      "row_count": 2
+    },
+    {
+      "cq": "CQ2",
+      "row_count": 13
+    },
+    {
+      "cq": "CQ3",
+      "row_count": 8
+    },
+    {
+      "cq": "CQ4",
+      "row_count": 12
+    }
+  ],
+  "ask_validation": {
+    "status": "PASS",
+    "passed": 8,
+    "total": 8
+  },
+  "reasoner": {
+    "ontology": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\ontology\\personashield-psq-sco-v9.1.owl",
+    "reasoner": "HermiT",
+    "protege_home": "C:\\Users\\user\\Downloads\\Protege-5.6.7-win\\Protege-5.6.7",
+    "java_executable": "C:\\Program Files\\Eclipse Adoptium\\jdk-25.0.2.10-hotspot\\bin\\java.exe",
+    "started": "2026-07-01T00:13:32.1086209+09:00",
+    "finished": "2026-07-01T00:13:35.7444583+09:00",
+    "duration_seconds": 3.636,
+    "command_returncode": 0,
+    "consistent": true,
+    "unsatisfiable_count": 0,
+    "unsatisfiable_classes": [],
+    "status": "PASS",
+    "stdout_file": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\outputs\\v8.2\\reasoner_runtime\\hermit-standalone-stdout.txt",
+    "stderr_file": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\outputs\\v8.2\\reasoner_runtime\\hermit-standalone-stderr.txt"
+  },
+  "kg_completeness": {
+    "status": "PASS",
+    "bounded_completeness_claim": "complete_for_CQ1_CQ2_CQ3_CQ4_only",
+    "required_checks": 4362,
+    "passed_checks": 4362,
+    "completeness_ratio": 1.0,
+    "template_count": 6,
+    "coverage_by_cq": {
+      "CQ1": {
+        "passed": 72,
+        "total": 72,
+        "coverage": 1.0
+      },
+      "CQ2": {
+        "passed": 30,
+        "total": 30,
+        "coverage": 1.0
+      },
+      "CQ3": {
+        "passed": 6,
+        "total": 6,
+        "coverage": 1.0
+      },
+      "CQ4": {
+        "passed": 12,
+        "total": 12,
+        "coverage": 1.0
+      }
+    },
+    "noise_analysis": {
+      "dangling_local_reference_count": 0,
+      "graph_export_status": "checked",
+      "graph_export_node_count": 311,
+      "graph_export_edge_count": 3164
+    },
+    "removed_scope_analysis": {
+      "forbidden_term_count": 25,
+      "literal_hit_count": 0,
+      "graph_export_hit_count": 0,
+      "status": "PASS",
+      "literal_hits": [],
+      "graph_export_hits": []
+    },
+    "owl_restriction_analysis": {
+      "status": "PASS",
+      "malformed_restriction_count": 0,
+      "malformed_restrictions": []
+    },
+    "error_analysis": {
+      "severity_counts": {},
+      "category_counts": {}
+    },
+    "report_file": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\outputs\\v9_1\\kg-completeness-report.json"
+  },
+  "errors": [],
+  "warnings": [],
+  "status": "PASS"
+}

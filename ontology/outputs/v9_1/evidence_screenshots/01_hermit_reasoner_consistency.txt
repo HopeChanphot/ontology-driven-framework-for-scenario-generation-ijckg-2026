@@ -1,0 +1,13 @@
+PS C:\Users\user\PersonaShieldQuest-Ontology> powershell.exe -NoProfile -ExecutionPolicy Bypass -File
+>> scripts\run_hermit_reasoner_v8_2.ps1 -Ontology "ontology\personashield-psq-sco-v9.1.owl" -Output "outputs\v9_1\hermit-reasoner-
+>> report.json"
+
+# HermiT ontology consistency result
+reasoner: HermiT
+status: PASS
+consistent: True
+unsatisfiable_count: 0
+unsatisfiable_classes: []
+duration_seconds: 3.636
+started: 2026-07-01T00:13:32.1086209+09:00
+finished: 2026-07-01T00:13:35.7444583+09:00

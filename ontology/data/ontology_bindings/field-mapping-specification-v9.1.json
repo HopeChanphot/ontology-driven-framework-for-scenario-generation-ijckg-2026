@@ -1,0 +1,160 @@
+{
+  "version": "9.1.0",
+  "scope": "PSQ-SCO v9.1 JSON/engine-to-ontology mapping contract for scenario-control only.",
+  "round_trip": "JSON -> ontology identifiers and semantic packet -> JSON must preserve all critical engine fields.",
+  "fields": [
+    {
+      "engine_field": "role",
+      "ontology_property": "hasPersonaRole/suitableForRole",
+      "expected_type": "controlled string -> PersonaRole individual",
+      "required": true,
+      "validation_rule": "Must be one of IT, FINANCE, HR, MANAGEMENT, OTHER.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "age_group_code",
+      "ontology_property": "hasAgeGroup/suitableForAgeGroup",
+      "expected_type": "controlled string -> AgeGroup individual",
+      "required": true,
+      "validation_rule": "Must be one of 15_21, 22_35, 36_45, 46_59, 60_90.",
+      "legacy_aliases": [
+        "16_19 -> rejected because it overlaps the canonical taxonomy"
+      ]
+    },
+    {
+      "engine_field": "stage_id",
+      "ontology_property": "atLearningStage/suitableForStage; LearningStage hasMacroStage and hasMicroStage",
+      "expected_type": "controlled string -> exact LearningStage individual",
+      "required": true,
+      "validation_rule": "Must be one of the nine engine stage IDs and decompose to exactly one macro and one micro stage.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "channel",
+      "ontology_property": "usesChannel/permitsChannel",
+      "expected_type": "controlled string -> Channel individual",
+      "required": true,
+      "validation_rule": "Must be email, sms, or voice.",
+      "legacy_aliases": [
+        "SMSChat -> sms",
+        "VoiceCall -> voice",
+        "Email -> email"
+      ]
+    },
+    {
+      "engine_field": "variant",
+      "ontology_property": "hasVariant/permitsVariant",
+      "expected_type": "controlled string -> ScenarioVariant individual",
+      "required": true,
+      "validation_rule": "Must be fake or real and agree with is_scam.",
+      "legacy_aliases": [
+        "attack -> fake",
+        "legitimate -> real"
+      ]
+    },
+    {
+      "engine_field": "difficulty_band",
+      "ontology_property": "hasDifficultyBand/permitsDifficultyBand",
+      "expected_type": "controlled string -> DifficultyBand individual",
+      "required": true,
+      "validation_rule": "Engine value must be easy, moderate, or hard.",
+      "legacy_aliases": [
+        "introductory -> easy",
+        "developing -> moderate",
+        "advanced -> hard"
+      ]
+    },
+    {
+      "engine_field": "retrieval_mode",
+      "ontology_property": "usesRetrievalMode",
+      "expected_type": "controlled string -> RetrievalMode individual",
+      "required": true,
+      "validation_rule": "Must be THAI_LOCAL, ENGLISH_GLOBAL, or HYBRID_COMPARE.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "language",
+      "ontology_property": "languageCode",
+      "expected_type": "BCP-47-style short code",
+      "required": true,
+      "validation_rule": "Current release permits en or th.",
+      "legacy_aliases": [
+        "English -> en",
+        "Thai -> th"
+      ]
+    },
+    {
+      "engine_field": "red_flags[]",
+      "ontology_property": "hasRedFlag",
+      "expected_type": "array of strings plus ontology IDs",
+      "required": "required for fake; empty for real",
+      "validation_rule": "Fake scenarios require at least one red flag; real scenarios must not import malicious red flags.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "safe_indicators[]",
+      "ontology_property": "hasSafeIndicator",
+      "expected_type": "array of strings plus ontology IDs",
+      "required": "required for real; empty for fake",
+      "validation_rule": "Real scenarios require at least one positive safe indicator.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "correct_action",
+      "ontology_property": "hasSafeResponse/recommendsSafeResponse",
+      "expected_type": "string plus SafeResponseAction individual",
+      "required": true,
+      "validation_rule": "Must express a safe independent verification, reporting, or approved-continuation action.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "source_record_id",
+      "ontology_property": "hasProvenanceRecord/sourceRecordId",
+      "expected_type": "string",
+      "required": true,
+      "validation_rule": "Must be stable within the source dataset and preserved through round trip.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "performance_state",
+      "ontology_property": "hasPerformanceState",
+      "expected_type": "controlled string -> PerformanceState individual",
+      "required": "optional in current engine; required for full ODEACT runtime",
+      "validation_rule": "If present, must map to a known PerformanceState individual.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "mood_context",
+      "ontology_property": "hasMoodContext",
+      "expected_type": "controlled string -> MoodContext individual",
+      "required": "placeholder only in v9",
+      "validation_rule": "Must not be used to claim implemented emotion inference unless a validated mood model is added.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "quality_rules[]",
+      "ontology_property": "hasQualityRule",
+      "expected_type": "array of ContentQualityRule identifiers",
+      "required": true,
+      "validation_rule": "Generated candidates must be checked against the active quality-rule set.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "validation_decision",
+      "ontology_property": "hasValidationDecision",
+      "expected_type": "accept/reject/review -> ValidationDecision individual",
+      "required": "required for generated scenario candidates",
+      "validation_rule": "Decision must be supported by quality score, rule checks, and evidence/provenance status.",
+      "legacy_aliases": []
+    },
+    {
+      "engine_field": "scenario_quality_score",
+      "ontology_property": "hasScenarioQualityScore/qualityScore",
+      "expected_type": "decimal score plus ScenarioQualityScore individual",
+      "required": "required for generated scenario candidates",
+      "validation_rule": "Score must be accompanied by confidenceScore and validationStatus.",
+      "legacy_aliases": []
+    }
+  ],
+  "ontology_file": "ontology/personashield-psq-sco-v9.1.owl"
+}

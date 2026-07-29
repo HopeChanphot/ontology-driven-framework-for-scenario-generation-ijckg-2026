@@ -1,0 +1,13 @@
+model_key,method,condition_number,condition_name,n,overall_conformance_mean,overall_conformance_median,overall_conformance_sd,common_case_concept_f1_mean,all_controls_exact_match_rate,contradiction_free_pass_rate
+mistral_7b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,120,0.8773986886957283,0.8854296460381189,0.026666737447636594,1.0,1,1
+mistral_7b,ontology_text_rag,4,Ontology-to-Text Vector RAG,120,0.8484700345763884,0.8414912840136055,0.025690361480895804,1.0,1,1
+mistral_7b,prompt_only,1,Prompt-Only Generation,120,0.7471597219168488,0.7451199338296113,0.023903499029004852,1.0,1,1
+mistral_7b,prompt_rag,2,Text-RAG Generation,120,0.8164057303214366,0.8303225806451613,0.05087785319365293,1.0,1,1
+qwen2_5_7b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,120,0.8793975454508206,0.8894061645592417,0.025982766580194116,1.0,1,1
+qwen2_5_7b,ontology_text_rag,4,Ontology-to-Text Vector RAG,120,0.8477811350364886,0.8474025974025975,0.022420196337371894,1.0,1,1
+qwen2_5_7b,prompt_only,1,Prompt-Only Generation,120,0.7875253503185111,0.7832347140039447,0.03162203097980974,1.0,1,1
+qwen2_5_7b,prompt_rag,2,Text-RAG Generation,120,0.8233647802870623,0.8392857142857143,0.050412005894026383,1.0,1,1
+qwen3_8b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,120,0.9017650100737225,0.902699173532507,0.019942166765380936,1.0,1,1
+qwen3_8b,ontology_text_rag,4,Ontology-to-Text Vector RAG,120,0.8522114670180748,0.8477653631284915,0.02628722865021877,1.0,1,0.9916666666666667
+qwen3_8b,prompt_only,1,Prompt-Only Generation,120,0.7876332231178012,0.7911960132890365,0.023630624913490814,1.0,1,1
+qwen3_8b,prompt_rag,2,Text-RAG Generation,120,0.8156461887435875,0.8348484848484848,0.054424110879246194,1.0,1,1

@@ -1,0 +1,45 @@
+judges:
+  - judge_id: llama_pedagogy
+    model_name: Llama-3.3-70B-Instruct
+    model_family: llama
+    provider_type: ollama
+    endpoint_url: http://localhost:11434
+    local_runtime: ollama
+    role: pedagogy_structure
+    enabled: true
+    max_tokens: 2048
+    temperature: 0.0
+    structured_output_mode: json
+    self_judge_policy: flag_and_allow_if_not_sole
+    fallback_model: qwen2.5-7b-instruct
+    cost_mode: institutional_gpu
+
+  - judge_id: qwen_multilingual
+    model_name: Qwen2.5-72B-Instruct
+    model_family: qwen
+    provider_type: vllm
+    endpoint_url: http://localhost:8000/v1
+    local_runtime: vllm
+    role: multilingual_json
+    enabled: true
+    max_tokens: 2048
+    temperature: 0.0
+    structured_output_mode: json
+    self_judge_policy: flag_and_allow_if_not_sole
+    fallback_model: qwen2.5-7b-instruct
+    cost_mode: institutional_gpu
+
+  - judge_id: deepseek_cyber
+    model_name: DeepSeek-V3
+    model_family: deepseek
+    provider_type: openai_compatible
+    endpoint_url: http://localhost:8080/v1
+    local_runtime: openai_compatible
+    role: cyber_reasoning
+    enabled: true
+    max_tokens: 2048
+    temperature: 0.0
+    structured_output_mode: json
+    self_judge_policy: flag_and_allow_if_not_sole
+    fallback_model: llama3.1-8b-instruct
+    cost_mode: institutional_gpu

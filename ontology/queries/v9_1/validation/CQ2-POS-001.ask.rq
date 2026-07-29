@@ -1,0 +1,11 @@
+PREFIX psq: <http://personashield.ait.ac.th/ontology/psq-sco#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+ASK {
+  psq:TPL_SMS_BankLink_Introductory psq:hasLegalConsequence psq:LegalConsequence_ReportToITOrSecurity ;
+                                     psq:hasRedFlag psq:RF_SuspiciousLink ;
+                                     psq:implementsTechnique psq:T1566_003 .
+}

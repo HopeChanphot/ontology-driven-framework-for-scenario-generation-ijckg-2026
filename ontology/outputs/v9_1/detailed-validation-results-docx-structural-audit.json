@@ -1,0 +1,11 @@
+{
+  "docx": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\docs\\PersonaShield_Quest_PSQ_SCO_Detailed_Validation_Metrics_and_CQ_Query_Results.docx",
+  "exists": true,
+  "size_bytes": 55106,
+  "paragraph_count": 104,
+  "table_count": 62,
+  "heading_count": 24,
+  "empty_tables": 0,
+  "status": "PASS",
+  "note": "Structural DOCX audit only; visual render QA is attempted separately."
+}

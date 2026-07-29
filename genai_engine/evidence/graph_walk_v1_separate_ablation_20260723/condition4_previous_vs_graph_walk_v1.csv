@@ -1,0 +1,11 @@
+metric,direction_or_role,previous_condition4,graph_walk_v1_condition4,delta_new_minus_previous,interpretation
+verified_graph_walk_exposure_rate,higher treatment fidelity,0.0,1.0,1.0,Graph-Walk v1 delivered an identifiable selected-subgraph walk to every assigned row
+external_vector_context_rate,higher nominal external retrieval exposure,0.6722222222222223,0.65,-0.022222222222222254,External vector context was present slightly less often in the new run
+schema_safe_repair_rate,lower is preferable for pure model attribution,0.225,0.33611111111111114,0.11111111111111113,More Graph-Walk v1 rows required deterministic schema-safe replacement
+live_model_content_retention_rate,higher is preferable for pure model attribution,0.775,0.6638888888888889,-0.11111111111111116,Fewer finalized Graph-Walk v1 rows retained live-model-derived content
+engine_validation_pass_rate,higher generation-engine rule conformance,0.4638888888888889,0.41944444444444445,-0.04444444444444445,The generation engine passed fewer new Condition-4 rows
+embedding_diversity,higher relative semantic dispersion,0.37649981344221345,0.37321139212897697,-0.003288421313236478,Graph-Walk v1 was slightly less dispersed under the frozen embedding representation
+self_bleu,lower relative lexical redundancy,0.8058836734700442,0.8397642468704855,0.03388057340044126,Graph-Walk v1 had greater lexical redundancy
+accepted_technical_rate,higher postprocessed technical deployment rate,0.9972222222222222,1.0,0.002777777777777768,The new finalized records all passed the current technical gate
+contradiction_free_pass_rate,higher rule-based contradiction pass rate,0.9972222222222222,1.0,0.002777777777777768,The new finalized records all passed the declared contradiction screen
+legacy_overall_conformance_secondary,higher project-specific legacy composite,0.8494875455436506,0.8526984115517106,0.003210866008059976,The secondary legacy composite increased slightly

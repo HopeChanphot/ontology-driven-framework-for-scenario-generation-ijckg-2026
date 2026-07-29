@@ -1,0 +1,140 @@
+{
+  "finance_beginner_3": {
+    "sms": {
+      "fake": {
+        "gpt4o_mini": [
+          {
+            "scenario_id": "SC-000001",
+            "persona_path_id": "finance_beginner_3",
+            "channel": "sms",
+            "variant": "fake",
+            "language": "en",
+            "llm_source": "gpt4o_mini",
+            "placement_score": 3,
+            "attack_tactics": ["smishing", "pretexting"],
+            "psych_triggers": ["authority", "urgency"],
+            "red_flags": ["Unknown sender claiming to be bank", "External URL", "Urgency language", "Generic greeting"],
+            "safe_indicators": [],
+            "sms_content": {
+              "sender_id": "BankSecure",
+              "messages": [
+                "URGENT: Suspicious transaction of $4,500 detected on your corporate card. Verify immediately at https://bank-secure-verify.net/check or card will be frozen."
+              ],
+              "malicious_url": "https://bank-secure-verify.net/check",
+              "red_flags": ["Unknown sender", "External URL not matching bank domain", "Urgency deadline", "Generic — no account details"],
+              "safe_indicators": [],
+              "correct_action": "Do not click the link. Contact your bank directly using the number on the back of your card. Report to IT security."
+            },
+            "email_content": null,
+            "voice_content": null,
+            "quality_score": 0.85,
+            "generation_timestamp": "2026-03-11T03:00:00"
+          }
+        ]
+      },
+      "real": {
+        "gpt4o_mini": [
+          {
+            "scenario_id": "SC-000002",
+            "persona_path_id": "finance_beginner_3",
+            "channel": "sms",
+            "variant": "real",
+            "language": "en",
+            "llm_source": "gpt4o_mini",
+            "placement_score": 3,
+            "attack_tactics": [],
+            "psych_triggers": [],
+            "red_flags": [],
+            "safe_indicators": ["Official company short code", "No URL or link", "Matches expected notification pattern", "No personal info requested"],
+            "sms_content": {
+              "sender_id": "ACME-HR",
+              "messages": [
+                "Reminder: Your Q1 expense report is due by Friday. Submit through the internal portal as usual. Questions? Contact accounting@acme.com"
+              ],
+              "malicious_url": null,
+              "red_flags": [],
+              "safe_indicators": ["Uses official company sender ID", "References routine internal process", "Directs to known internal portal", "Provides official contact email"],
+              "correct_action": "This is a legitimate internal reminder. Proceed to submit your expense report through the company portal as instructed."
+            },
+            "email_content": null,
+            "voice_content": null,
+            "quality_score": 0.88,
+            "generation_timestamp": "2026-03-11T03:00:00"
+          }
+        ]
+      }
+    }
+  },
+  "IT_intermediate_7": {
+    "voice": {
+      "fake": {
+        "qwen2_5_7b": [
+          {
+            "scenario_id": "SC-000003",
+            "persona_path_id": "IT_intermediate_7",
+            "channel": "voice",
+            "variant": "fake",
+            "language": "en",
+            "llm_source": "qwen2_5_7b",
+            "placement_score": 7,
+            "attack_tactics": ["vishing", "pretexting", "tech_support_scam"],
+            "psych_triggers": ["authority", "urgency", "fear"],
+            "red_flags": ["Asks for remote access", "Claims undisclosed security breach"],
+            "safe_indicators": [],
+            "sms_content": null,
+            "email_content": null,
+            "voice_content": {
+              "caller_id": "IT-SecOps-Internal",
+              "caller_persona": "Senior Security Engineer from SOC team",
+              "dialogue": [
+                {"speaker": "caller", "text": "Hi, this is David from the SOC team. We've detected a critical breach in the network segment your team manages. I need to run a diagnostic on your workstation.", "emotion": "serious"},
+                {"speaker": "target", "text": "I haven't seen any alerts in our monitoring dashboard.", "emotion": "skeptical"},
+                {"speaker": "caller", "text": "It's a zero-day — our SIEM just picked it up. The alerts haven't propagated yet. Can you install our emergency diagnostic tool? I'll send the link via Teams.", "emotion": "urgent"},
+                {"speaker": "target", "text": "What's the incident ticket number?", "emotion": "cautious"}
+              ],
+              "red_flags": ["No prior notice of security incident", "Asks to install remote tool", "Claims alerts haven't propagated — unusual", "Bypasses normal incident response process"],
+              "safe_indicators": [],
+              "correct_action": "Ask for the incident ticket number and verify through your SOC Slack/Teams channel. Never install remote diagnostic tools at a caller's request. Check SIEM dashboard yourself."
+            },
+            "quality_score": 0.92,
+            "generation_timestamp": "2026-03-11T03:01:00"
+          }
+        ]
+      },
+      "real": {
+        "qwen2_5_7b": [
+          {
+            "scenario_id": "SC-000004",
+            "persona_path_id": "IT_intermediate_7",
+            "channel": "voice",
+            "variant": "real",
+            "language": "en",
+            "llm_source": "qwen2_5_7b",
+            "placement_score": 7,
+            "attack_tactics": [],
+            "psych_triggers": [],
+            "red_flags": [],
+            "safe_indicators": ["Caller references known internal ticket", "Uses official process", "Doesn't ask for credentials", "Verifiable identity"],
+            "sms_content": null,
+            "email_content": null,
+            "voice_content": {
+              "caller_id": "IT-HelpDesk-x4200",
+              "caller_persona": "IT Help Desk — tier 2 engineer",
+              "dialogue": [
+                {"speaker": "caller", "text": "Hi, this is Priya from the help desk, ticket HD-20260311-042. You reported a VPN connectivity issue this morning. I'd like to walk through some troubleshooting steps.", "emotion": "professional"},
+                {"speaker": "target", "text": "Yes, I submitted that ticket around 9 AM. My VPN keeps disconnecting.", "emotion": "cooperative"},
+                {"speaker": "caller", "text": "Can you open your GlobalProtect client and tell me the gateway you're connected to? I can check the load balancer on my end.", "emotion": "helpful"},
+                {"speaker": "target", "text": "Sure, it shows gp-east-2.acme.com.", "emotion": "neutral"}
+              ],
+              "red_flags": [],
+              "safe_indicators": ["References specific ticket number you submitted", "Asks about technical details, not credentials", "Uses known internal extension", "Normal troubleshooting process"],
+              "correct_action": "This is a legitimate help desk follow-up on your own ticket. Proceed with the troubleshooting steps. The caller is not asking for passwords or remote access."
+            },
+            "quality_score": 0.90,
+            "generation_timestamp": "2026-03-11T03:01:00"
+          }
+        ]
+      }
+    }
+  }
+}

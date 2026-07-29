@@ -1,0 +1,2 @@
+model_key,matched_all_four_case_count,matched_all_four,prompt_only_case_count,prompt_rag_case_count,ontology_prompt_rag_case_count,ontology_text_rag_case_count
+qwen2_5_7b,1,False,1,1,1,1

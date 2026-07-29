@@ -1,0 +1,60 @@
+PERSONASHIELD QUEST SCENARIO CONTROL ONTOLOGY (PSQ-SCO)
+Version: 9.1.0
+Date: 2026-06-30
+Namespace: http://personashield.ait.ac.th/ontology/psq-sco#
+Prior version: ontology/personashield-psq-sco-v9.owl
+Authoritative OWL: ontology/personashield-psq-sco-v9.1.owl
+
+1. PURPOSE
+
+PSQ-SCO v9.1.0 is the corrected reviewer-aligned scenario-control ontology for
+PersonaShield Quest. It removes the PedagogicalKnowledgeEntity branch and all
+legacy pedagogy-specific classes, individuals, properties, runtime tags, and
+semantic-packet fields from the PSQ-SCO artifact.
+
+The ontology now focuses only on the four PSQ-SCO competency-question areas:
+CQ1 scenario selection, CQ2 cybersecurity structure, CQ3 content quality
+control, and CQ4 evidence/provenance grounding.
+
+2. REMOVED FROM v9.1.0
+
+- PedagogicalKnowledgeEntity and subclasses.
+- BloomLevel, KnowledgeType, LearningObjective, FeedbackType, HintStrategy.
+- PedagogicalConstraint, CognitiveProcess, DataObject, SupportStrategy, and
+  EvidenceOfLearning as pedagogical imports.
+- Properties such as hasBloomLevel, hasKnowledgeType, usesFeedbackType,
+  usesHintStrategy, targetsLearningObjective, supportedByTheorySource, and
+  importsPedagogicalConstraint.
+- Runtime fields knowledge_type, learning_focus, and pedagogical_alignment.
+
+3. RETAINED PSQ-SCO SCOPE
+
+- Scenario templates, channel, variant, difficulty, learner-state selection.
+- Cybersecurity attack/legitimate-communication structure.
+- Content-quality rules, validation decisions, quality score, violations.
+- Evidence packs, source artifacts, datasets, and provenance records.
+- Semantic packets and engine-facing runtime exports.
+
+4. SIZE
+
+- classes: 73
+- object properties: 49
+- datatype properties: 39
+- annotation properties: 17
+- named individuals: 133
+- graph nodes: 311
+- graph edges: 3164
+- runtime records: 12425
+- removed pedagogy resources/properties: 36 resources, 10 properties
+- removed pedagogy triples: 605
+- removed malformed anonymous OWL restrictions: 1
+
+5. VALIDATION
+
+Run:
+  & ".\.venv-sparql-v8.2\Scripts\python.exe" scripts/validate_psq_sco_v9_1_no_pedagogy.py
+
+Run HermiT:
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/run_hermit_reasoner_v8_2.ps1 -Ontology "ontology\personashield-psq-sco-v9.1.owl" -Output "outputs\v9_1\hermit-reasoner-report.json"
+
+No PersonaShieldQuest-GenAI-Engine file is changed.

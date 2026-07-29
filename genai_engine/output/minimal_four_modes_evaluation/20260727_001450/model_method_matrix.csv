@@ -1,0 +1,2 @@
+model_key,prompt_only,prompt_rag,ontology_prompt_rag,ontology_text_rag
+qwen2_5_7b,0.7477653631284915,0.8495024875621892,0.900804289544236,0.8425925925925927

@@ -1,0 +1,16 @@
+PREFIX psq: <http://personashield.ait.ac.th/ontology/psq-sco#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+ASK {
+  FILTER NOT EXISTS {
+    ?template rdf:type psq:ScenarioTemplate ;
+              psq:suitableForRole psq:Role_HR ;
+              psq:suitableForAgeGroup psq:Age_22_35 ;
+              psq:usesChannel psq:VoiceCall ;
+              psq:hasVariant psq:FakeVariant ;
+              psq:hasDifficultyBand psq:Difficulty_Introductory .
+  }
+}

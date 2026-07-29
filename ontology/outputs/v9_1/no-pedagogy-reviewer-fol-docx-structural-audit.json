@@ -1,0 +1,18 @@
+{
+  "docx": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\docs\\PersonaShield_Quest_PSQ_SCO_No_Pedagogy_Reviewer_Aligned_Document_and_FOL.docx",
+  "opens_with_python_docx": true,
+  "paragraphs": 161,
+  "tables": 14,
+  "sections": 1,
+  "embedded_media_count": 1,
+  "has_framework_figure": true,
+  "formula_like_blocks": 25,
+  "has_title": true,
+  "has_fol_section": true,
+  "has_no_pedagogy_claim": true,
+  "has_hermit_validation": true,
+  "has_kg_completeness": true,
+  "has_cq_table": true,
+  "word_document_xml_bytes": 142685,
+  "package_parts": 19
+}

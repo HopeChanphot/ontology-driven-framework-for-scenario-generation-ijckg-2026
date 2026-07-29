@@ -1,0 +1,132 @@
+{
+  "run_id": "20260723_200851",
+  "generated_at_utc": "2026-07-23T11:19:23.743049+00:00",
+  "scope": "targeted_repair_existing_outputs_only",
+  "generation_model_calls": 0,
+  "frozen_experiment_note": "Uses the manuscript's paper120_live_recovered_final condition files. The later Graph-Walk v1 mode-4 ablation is a separate experiment and is not silently substituted into this protected frozen design.",
+  "input_root": "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios",
+  "ontology_path": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\ontology\\personashield-psq-sco-v9.1.owl",
+  "dataset_catalog_path": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\data\\ontology_bindings\\dataset-catalog.json",
+  "corpus_root": "D:\\PersonaShieldQuest-GenAI-Engine\\output",
+  "output_dir": "D:\\PersonaShieldQuest-GenAI-Engine\\output\\targeted_psq_sco_evaluation_repair\\20260723_200851\\evaluation_rerun",
+  "design_checks": {
+    "record_count": 1440,
+    "case_count": 120,
+    "model_count": 3,
+    "condition_count": 4,
+    "live_record_count": 1440,
+    "fallback_record_count": 0,
+    "duplicate_key_count": 0,
+    "missing_key_count": 0,
+    "duplicate_keys": [],
+    "missing_keys": []
+  },
+  "metric_configuration": {
+    "primary_components": [
+      "json_validity_J",
+      "schema_completeness",
+      "control_adherence_A",
+      "method_conditioned_precision_recall_f1_req",
+      "provenance_field_completeness_G",
+      "canonical_traceability_T",
+      "contradiction_rate_E",
+      "ontology_scope",
+      "existing_diversity_diagnostics"
+    ],
+    "oci_equal_weight": {
+      "json_validity": 0.2,
+      "control_adherence": 0.2,
+      "required_concept_f1": 0.2,
+      "grounding_completeness": 0.2,
+      "non_contradiction": 0.2
+    },
+    "oci_equal_weight_status": "secondary_descriptive_not_calibrated_not_quality_percentage_not_threshold_not_learner_effect",
+    "oci_legacy_sensitivity_only": {
+      "json_validity": 0.2,
+      "control_adherence": 0.25,
+      "required_concept_f1": 0.25,
+      "grounding_completeness": 0.2,
+      "non_contradiction": 0.1
+    },
+    "claim_source_support": "not_evaluated",
+    "traceability_empty_contract_policy": "null_not_applicable_when_method_declares_no_trace_links"
+  },
+  "sensitivity": {
+    "draws": 10000,
+    "seed": 20260723,
+    "distribution": "Dirichlet(1,1,1,1,1) via normalized exponential draws"
+  },
+  "traceability_summary": {
+    "applicable_output_count": 946,
+    "not_applicable_output_count": 494,
+    "unresolved_output_count": 164,
+    "any_diagnostic_output_count": 344,
+    "missing_link_count": 0,
+    "wrong_target_link_count": 447,
+    "duplicate_or_conflicting_link_count": 521
+  },
+  "software": {
+    "python": "3.12.13 (main, Mar  3 2026, 15:01:35) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "implementation": "CPython"
+  },
+  "input_sha256": {
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\mistral_7b__ontology_prompt_rag__paper_120_live_recovered.jsonl": "71abcbf61487d3dd01fb2efd5deba1ba3d8420fb90159fb66d7e29c19f6cccd7",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\mistral_7b__ontology_text_rag__paper_120_live_recovered.jsonl": "5d8326a108e8803a66fadd81f4229e546da3840e349aa6561337bb2749664ccf",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\mistral_7b__prompt_only__paper_120_live_recovered.jsonl": "0e7f85348309ebe09dece17334eb2b15b5c3f29e7e5a5e1b97695df9eb649ee9",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\mistral_7b__prompt_rag__paper_120_live_recovered.jsonl": "f4f462b5b5a3ac8625ce7eff46c4830aea4a0cfbc03e49a9cee6849b8b6c4fb0",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\qwen2_5_7b__ontology_prompt_rag__paper_120_live_recovered.jsonl": "ae3e8085cbcd94383b04cc0110f3d04481d4ad501b401fb3a3a941412281c0d7",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\qwen2_5_7b__ontology_text_rag__paper_120_live_recovered.jsonl": "0241b705b7cb6bdde57f87d9dbcbdfd2f54d7d8ed8d2217002d36f14a4456776",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\qwen2_5_7b__prompt_only__paper_120_live_recovered.jsonl": "cbe910486b2189c8b94446820834a19ff2a352b58dbf08078f43df868d6736b3",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\qwen2_5_7b__prompt_rag__paper_120_live_recovered.jsonl": "bab7bedce8366bdbe99afd1fc95e7988a295769fe93add08d43df22f66a11b9f",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\qwen3_8b__ontology_prompt_rag__paper_120_live_recovered.jsonl": "100364a6df9e839ad694a5a1ed3aa60b2e6f8e9e8e6cd4b1f2aea0872d97141a",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\qwen3_8b__ontology_text_rag__paper_120_live_recovered.jsonl": "e738edcd85219e92fae35190e2d4994ed56a4d89e53d45487206deca48d83bec",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\qwen3_8b__prompt_only__paper_120_live_recovered.jsonl": "f6d2e9c6e6f0aaf1ae173ac9feda73b05103088834d6002bd1d79bc8ee50bef2",
+    "D:\\PersonaShieldQuest-GenAI-Engine\\output\\paper120_live_recovered_final\\20260714_031104\\generated_scenarios\\qwen3_8b__prompt_rag__paper_120_live_recovered.jsonl": "87621dfaca998777cb0ba22fc7109b5b89be1cc5c7fc4dafb118d71b8fa44d85",
+    "C:\\Users\\user\\PersonaShieldQuest-Ontology\\ontology\\personashield-psq-sco-v9.1.owl": "eef7e0e554042eb90008d753b9ad94c42de99c7e5f5cabd569209c2bcdd0582f",
+    "C:\\Users\\user\\PersonaShieldQuest-Ontology\\data\\ontology_bindings\\dataset-catalog.json": "a4cb41c43155b94efca79f990cab9738b5bffbb02a3d633829d6fc6c57a4870a"
+  },
+  "output_sha256_excluding_manifest": {
+    "component_metrics_by_output.csv": "c9b8bf398a33938c0b1bcc77d5c3ac130c291303dea1e499757aaf1458e6b041",
+    "evaluation_repair_report.md": "1f55a4e76a83fdb63bfcf34dc22d466578889fd7a7b5dbbb374d1a9ceba789de",
+    "five_matched_cases.json": "88ba48377fea020815817f67d386617cdf135e4dd14a6ea884d92c06e2294000",
+    "five_matched_cases.md": "16a80fe1b0ee781bf130ad437a35d49c27aa830fbbded715c392bb2969699d1a",
+    "method_summary.csv": "84ae916fd85867de33f04017f0554098cb7543b16fe7eb5ab6526f89c7ba1aa7",
+    "model_summary.csv": "2ea08780b3c416b34edae79cee5499130d742dd7bb1fac2d126d056c3366a9d2",
+    "oci_weight_sensitivity.csv": "cf6895dc118a4ca4f3d5c904e39206c8b73f3c5179dae863ccd7698b28df406e",
+    "provenance_trace_failures.csv": "957a164693037708d5ab93e76dbfc92802f17b621e1c61bd803a09bbdca4ffac",
+    "weight_sensitivity_summary.json": "f8e6cdc3eeea01452a0a0afa2ff24b9ed6eda1503aa298d0ef9183b9112b50c7"
+  },
+  "selected_five_cases": [
+    {
+      "selection_type": "representative_median_performing",
+      "case_id": "PSQ-SCO-120-053",
+      "model_key": "mistral_7b",
+      "selection_reason": "Pair mean OCI_eq is nearest the median across complete case-model pairs (global median=0.858676)."
+    },
+    {
+      "selection_type": "ontology_to_text_contradiction",
+      "case_id": "PSQ-SCO-120-023",
+      "model_key": "qwen3_8b",
+      "selection_reason": "The frozen ontology-to-text output triggered the deterministic contradiction rule."
+    },
+    {
+      "selection_type": "external_rag_returned_no_text",
+      "case_id": "PSQ-SCO-120-002",
+      "model_key": "mistral_7b",
+      "selection_reason": "The Text-RAG condition stored no retrieved external context for this matched pair."
+    },
+    {
+      "selection_type": "legitimate_communication",
+      "case_id": "PSQ-SCO-120-070",
+      "model_key": "qwen2_5_7b",
+      "selection_reason": "A real/legitimate case nearest the median of eligible legitimate pairs."
+    },
+    {
+      "selection_type": "clearest_precision_recall_tradeoff",
+      "case_id": "PSQ-SCO-120-064",
+      "model_key": "qwen3_8b",
+      "selection_reason": "Contains the largest remaining absolute method-conditioned precision/recall gap (0.828571, method=ontology_text_rag)."
+    }
+  ]
+}
