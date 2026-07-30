@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 import random
@@ -383,13 +384,50 @@ class PSQSCOGenerationEngine:
             data["red_flags"] = []
             if not data.get("safe_indicators"):
                 data["safe_indicators"] = ["Expected workflow can be verified through approved systems"]
+        operational_trace = {
+            field: copy.deepcopy(data[field])
+            for field in (
+                "llm_source",
+                "generation_timestamp",
+                "attack_type",
+                "difficulty_band",
+                "pressure_band",
+                "generation_meta",
+            )
+            if field in data
+        }
+        schema_repair_used = False
         try:
             scenario = ScenarioContent(**data)
             data = scenario.model_dump()
         except Exception:
+            schema_repair_used = True
             scenario = ScenarioContent(**fallback)
             data = scenario.model_dump()
+            data.update(operational_trace)
             data["generation_meta"]["repair_note"] = "LLM output could not be repaired; schema-safe fallback used."
+        initial_valid, initial_issues = self.validator.validate_scenario(
+            data,
+            channel,
+            variant,
+            int(seed["stage_index"]),
+            seed["vocabulary_band"],
+            seed["knowledge_type"],
+            seed["role"],
+        )
+        if llm_key == "qwen2_5_0_5b" and (schema_repair_used or not initial_valid):
+            projection_issues = list(initial_issues)
+            if schema_repair_used:
+                projection_issues.insert(0, "Live draft required schema repair before validation.")
+            data = self._project_small_model_live_output(
+                raw=raw,
+                fallback=fallback,
+                traced=data,
+                channel=channel,
+                variant=variant,
+                seed=seed,
+                initial_issues=projection_issues,
+            )
         score, breakdown, flags = self.validator.score_scenario_details(
             data,
             channel,
@@ -404,6 +442,105 @@ class PSQSCOGenerationEngine:
         data["quality_flags"] = flags
         data["diversity_fingerprint"] = hashlib.md5(json.dumps(data, sort_keys=True, ensure_ascii=False).encode("utf-8")).hexdigest()
         return data
+
+    def _project_small_model_live_output(
+        self,
+        *,
+        raw: Dict[str, Any],
+        fallback: Dict[str, Any],
+        traced: Dict[str, Any],
+        channel: str,
+        variant: str,
+        seed: Dict[str, Any],
+        initial_issues: List[str],
+    ) -> Dict[str, Any]:
+        """Keep the maximum validator-safe subset of a tiny model's live draft.
+
+        The 0.5B integration model can return parseable JSON that is too terse,
+        dense, or weakly role-bound for the research validator. Start from the
+        deterministic schema-safe scenario, retain the live-call trace, then
+        accept live content fields one at a time only when the complete
+        scenario continues to pass validation. The raw live draft remains in
+        metadata for auditability even when a field is rejected.
+        """
+
+        projected = copy.deepcopy(fallback)
+        for field in (
+            "llm_source",
+            "generation_timestamp",
+            "attack_type",
+            "difficulty_band",
+            "pressure_band",
+            "generation_meta",
+        ):
+            if field in traced:
+                projected[field] = copy.deepcopy(traced[field])
+
+        candidate_fields = [
+            "title",
+            "opening_hook",
+            "sender_or_caller",
+            "correct_action",
+            "red_flags",
+            "attack_tactics",
+            "psych_triggers",
+            "game_choices",
+        ]
+        if channel == "email":
+            candidate_fields.extend(("subject", "body_html"))
+        elif channel == "sms":
+            candidate_fields.append("messages")
+        elif channel == "voice":
+            candidate_fields.append("dialogue")
+
+        accepted: List[str] = []
+        rejected: List[str] = []
+        raw_draft: Dict[str, Any] = {}
+        for field in candidate_fields:
+            value = raw.get(field)
+            if value in (None, "", []):
+                continue
+            raw_draft[field] = copy.deepcopy(value)
+            candidate = copy.deepcopy(projected)
+            candidate[field] = copy.deepcopy(value)
+            try:
+                candidate = ScenarioContent(**candidate).model_dump()
+            except Exception:
+                rejected.append(field)
+                continue
+            valid, _ = self.validator.validate_scenario(
+                candidate,
+                channel,
+                variant,
+                int(seed["stage_index"]),
+                seed["vocabulary_band"],
+                seed["knowledge_type"],
+                seed["role"],
+            )
+            if valid:
+                projected = candidate
+                accepted.append(field)
+            else:
+                rejected.append(field)
+
+        meta = copy.deepcopy(projected.get("generation_meta") or {})
+        meta["small_model_guardrail"] = {
+            "applied": True,
+            "strategy": "validator_safe_field_projection",
+            "initial_validation_issues": list(initial_issues),
+            "live_fields_accepted": accepted,
+            "live_fields_rejected": rejected,
+            "raw_live_draft": raw_draft,
+            "interpretation": (
+                "The live 0.5B draft was retained for audit and only fields "
+                "that preserved full scenario validation were published."
+            ),
+        }
+        projected["generation_meta"] = meta
+        repair_actions = list(projected.get("repair_actions") or [])
+        repair_actions.append("Applied validator-safe projection to the live 0.5B draft.")
+        projected["repair_actions"] = repair_actions
+        return ScenarioContent(**projected).model_dump()
 
     def _rag_runtime_status(self) -> Dict[str, Any]:
         """Return best-effort RAG health metadata without interrupting generation."""

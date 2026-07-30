@@ -30,6 +30,20 @@ class LocalModelProfile:
 
 
 LIGHTWEIGHT_MODEL_PROFILES: Dict[str, LocalModelProfile] = {
+    "qwen2_5_0_5b": LocalModelProfile(
+        key="qwen2_5_0_5b",
+        model_name="psq-small:q4_0",
+        provider="ollama",
+        role="portable_low_resource_json_smoke_testing",
+        temperature=0.20,
+        max_tokens=1000,
+        timeout=300,
+        num_ctx=4096,
+        description=(
+            "Bundled Qwen2.5 0.5B Instruct Q4_0 model for portable "
+            "low-resource integration tests; not a paper-grade replacement."
+        ),
+    ),
     "qwen2_5_7b": LocalModelProfile(
         key="qwen2_5_7b",
         model_name="qwen2.5:7b-instruct",

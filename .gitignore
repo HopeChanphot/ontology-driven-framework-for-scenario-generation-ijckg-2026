@@ -151,6 +151,13 @@ activemq-data/
 .env
 .envrc
 .venv
+.macos_test_output/
+.portable_runtime/
+live_scenario_output/
+models/*.gguf
+runtime/*.zip
+runtime/*.pkg
+wheelhouse/
 env/
 venv/
 ENV/

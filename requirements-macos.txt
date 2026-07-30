@@ -1,0 +1,7 @@
+# CPython 3.12 macOS environment for the complete offline portable test.
+-r requirements-minimal.txt
+
+# Required by the research-evaluation unit tests.
+pandas>=2.0,<3
+scipy>=1.11,<2
+PyYAML>=6,<7

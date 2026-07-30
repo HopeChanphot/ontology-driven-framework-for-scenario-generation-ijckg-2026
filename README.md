@@ -18,6 +18,8 @@ Start with `START_HERE_PSQ_SCO_HANDOVER.docx`. For detailed setup, file location
 - `EXCLUSIONS_AND_REBUILD.md` - what was intentionally omitted and how to restore it.
 - `LICENSE_AND_DATA_NOTICE.md` - redistribution and third-party data cautions.
 - `GITHUB_UPLOAD_COMMANDS.md` - access, login, synchronization, upload, and post-push verification commands.
+- `MACOS_TESTING.md` and `RUN_AND_TEST_MACOS.sh` - create the named `chanphot-psq-sco` environment and run the GitHub source smoke workflow on macOS.
+- `START_AND_TEST_MACOS.command` and `RUN_ONE_LIVE_SCENARIO_MACOS.command` - initialize the separate complete portable bundle and generate one live small-model scenario.
 - `MANIFEST.csv` and `CHECKSUMS_SHA256.txt` - package inventory and integrity checks.
 
 ## First setup
@@ -34,6 +36,41 @@ $py = (Resolve-Path .\.venv\Scripts\python.exe).Path
 ```
 
 The larger files in `genai_engine/requirements*.txt` and `ontology/requirements.txt` are optional expansion environments, not required for the minimal workflow.
+
+On macOS with Python 3.12, the source-repository setup and test workflow is:
+
+```bash
+chmod +x ./RUN_AND_TEST_MACOS.sh
+PYTHON_CMD=python3.12 ./RUN_AND_TEST_MACOS.sh
+```
+
+It creates `.venv` with the environment prompt name `chanphot-psq-sco`. See
+`MACOS_TESTING.md` for cloning, Homebrew Python, output, and repeat-run commands.
+
+## Portable macOS small-model workflow
+
+The source repository contains the complete launcher, model profile, validator,
+and one-scenario workflow. It does not store the large GGUF model, Ollama
+archive, Python installer, or offline wheelhouse because those files exceed
+normal GitHub repository limits. They remain in the complete portable
+internship handover folder. Expected paths and hashes are recorded in
+`OFFLINE_ASSET_SHA256.txt`.
+
+When those portable assets are present, run:
+
+```bash
+chmod +x START_AND_TEST_MACOS.command RUN_ONE_LIVE_SCENARIO_MACOS.command
+./START_AND_TEST_MACOS.command
+./RUN_ONE_LIVE_SCENARIO_MACOS.command
+```
+
+The second command creates exactly one live `ontology_text_rag` scenario using
+the included Qwen2.5 0.5B model and saves a readable copy at
+`live_scenario_output/LATEST_LIVE_SCENARIO.json`. If the small model produces
+a structurally weak draft, the engine publishes only validator-safe live fields
+and preserves the raw draft and decision trace in
+`scenario.generation_meta.small_model_guardrail`. See
+`RUN_ONE_LIVE_SCENARIO.md`.
 
 ## Run all four modes and evaluate
 

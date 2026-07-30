@@ -10,7 +10,23 @@ ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "MANIFEST.csv"
 CHECKSUMS = ROOT / "CHECKSUMS_SHA256.txt"
 CONTROL_NAMES = {"MANIFEST.csv", "CHECKSUMS_SHA256.txt"}
-EXCLUDED_DIRECTORY_NAMES = {".git", ".venv", "__pycache__"}
+EXCLUDED_FILE_NAMES = {
+    ".DS_Store",
+    "Thumbs.db",
+    "desktop.ini",
+}
+OPTIONAL_PORTABILITY_PATHS = {
+    ".gitattributes",
+    ".gitignore",
+}
+EXCLUDED_DIRECTORY_NAMES = {
+    ".git",
+    ".venv",
+    ".macos_test_output",
+    ".portable_runtime",
+    "live_scenario_output",
+    "__pycache__",
+}
 
 
 def sha256(path: Path) -> str:
@@ -28,6 +44,10 @@ def relative_files(*, include_manifest: bool) -> list[Path]:
             continue
         relative = path.relative_to(ROOT)
         if any(part in EXCLUDED_DIRECTORY_NAMES for part in relative.parts):
+            continue
+        if path.name in EXCLUDED_FILE_NAMES:
+            continue
+        if relative.as_posix() in OPTIONAL_PORTABILITY_PATHS:
             continue
         if relative.as_posix() == "CHECKSUMS_SHA256.txt":
             continue
