@@ -1,0 +1,13 @@
+model_key,method,condition_number,condition_name,n,direct_timing_n,direct_generation_seconds_mean,direct_generation_seconds_median,observed_timing_n,observed_interarrival_seconds_mean,observed_interarrival_seconds_median,parse_retry_count_mean,live_llm_rate,fallback_rate
+mistral_7b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,120,116,182.9414353448276,191.3981,1,244.567817,244.567817,0.0,1.0,0.0
+mistral_7b,ontology_text_rag,4,Ontology-to-Text Vector RAG,120,120,209.53270333333333,194.36515,0,,,0.0,1.0,0.0
+mistral_7b,prompt_only,1,Prompt-Only Generation,120,120,176.29694416666666,174.51815,0,,,0.0,1.0,0.0
+mistral_7b,prompt_rag,2,Text-RAG Generation,120,114,146.8368447368421,147.78785,2,233.985898,233.985898,0.0,1.0,0.0
+qwen2_5_7b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,120,103,111.58216990291263,112.2617,16,66.6715810625,66.45284000000001,0.0,1.0,0.0
+qwen2_5_7b,ontology_text_rag,4,Ontology-to-Text Vector RAG,120,0,,,119,423.5095293193277,434.038393,0.0,1.0,0.0
+qwen2_5_7b,prompt_only,1,Prompt-Only Generation,120,0,,,119,49.22364429411765,48.830748,0.0,1.0,0.0
+qwen2_5_7b,prompt_rag,2,Text-RAG Generation,120,76,120.01951184210526,119.70655,35,294.82206754285716,448.731016,0.0,1.0,0.0
+qwen3_8b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,120,0,,,119,66.56288979831933,66.325693,0.0,1.0,0.0
+qwen3_8b,ontology_text_rag,4,Ontology-to-Text Vector RAG,120,111,297.6311405405405,298.0059,8,338.059283875,297.1726655,0.0,1.0,0.0
+qwen3_8b,prompt_only,1,Prompt-Only Generation,120,0,,,119,71.56722168907562,71.598326,0.0,1.0,0.0
+qwen3_8b,prompt_rag,2,Text-RAG Generation,120,120,263.72519416666665,261.75425,0,,,0.0,1.0,0.0

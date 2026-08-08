@@ -1,0 +1,35 @@
+PREFIX psq: <http://personashield.ait.ac.th/ontology/psq-sco#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+# CQ1 - Scenario Selection
+SELECT DISTINCT ?learner ?performanceState ?moodContext ?currentStage ?targetStage ?template ?templateTitle ?channel ?variant ?attackType ?difficulty ?role ?ageGroup ?retrievalMode
+WHERE {
+  VALUES ?learner { psq:Learner_HR_Beginner }
+  ?learner psq:hasCurrentState ?state ;
+           psq:hasPersonaRole ?role ;
+           psq:hasAgeGroup ?ageGroup ;
+           psq:usesRetrievalMode ?retrievalMode .
+  OPTIONAL { ?learner psq:hasPerformanceState ?performanceState }
+  OPTIONAL { ?learner psq:hasMoodContext ?moodContext }
+  ?state psq:atLearningStage ?currentStage ;
+         psq:hasConstraintProfile ?transition .
+  ?transition psq:targetsLearningStage ?targetStage ;
+              psq:permitsDifficultyBand ?difficulty ;
+              psq:permitsChannel ?channel ;
+              psq:permitsVariant ?variant ;
+              psq:permitsAttackType ?attackType .
+  ?template rdf:type psq:ScenarioTemplate ;
+            psq:suitableForStage ?targetStage ;
+            psq:suitableForRole ?role ;
+            psq:suitableForAgeGroup ?ageGroup ;
+            psq:usesRetrievalMode ?retrievalMode ;
+            psq:hasDifficultyBand ?difficulty ;
+            psq:usesChannel ?channel ;
+            psq:hasVariant ?variant ;
+            psq:representsAttackType ?attackType .
+  OPTIONAL { ?template psq:scenarioTitle ?templateTitle }
+}
+ORDER BY ?template

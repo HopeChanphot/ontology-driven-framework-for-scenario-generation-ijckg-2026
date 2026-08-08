@@ -1,0 +1,270 @@
+{
+  "draws": 10000,
+  "seed": 20260723,
+  "distribution": "Dirichlet(1,1,1,1,1) via normalized exponential draws",
+  "component_order": [
+    "json_validity",
+    "control_adherence",
+    "required_concept_f1",
+    "grounding_completeness",
+    "non_contradiction"
+  ],
+  "scopes": {
+    "overall": {
+      "equal_scores": {
+        "prompt_only": 0.7985256195015837,
+        "prompt_rag": 0.846074082790186,
+        "ontology_prompt_rag": 0.9089496651254058,
+        "ontology_text_rag": 0.8792567031015872
+      },
+      "legacy_scores": {
+        "prompt_only": 0.7741060984510537,
+        "prompt_rag": 0.8184722331173622,
+        "ontology_prompt_rag": 0.8861870814067572,
+        "ontology_text_rag": 0.8494875455436506
+      },
+      "equal_ranks": {
+        "prompt_only": 4,
+        "prompt_rag": 3,
+        "ontology_prompt_rag": 1,
+        "ontology_text_rag": 2
+      },
+      "legacy_ranks": {
+        "prompt_only": 4,
+        "prompt_rag": 3,
+        "ontology_prompt_rag": 1,
+        "ontology_text_rag": 2
+      },
+      "rank_reversals": {
+        "prompt_only": false,
+        "prompt_rag": false,
+        "ontology_prompt_rag": false,
+        "ontology_text_rag": false
+      },
+      "first_place_proportions": {
+        "prompt_only": 0.0,
+        "prompt_rag": 0.0,
+        "ontology_prompt_rag": 1.0,
+        "ontology_text_rag": 0.0
+      },
+      "pairwise_rank_stability": {
+        "prompt_only_vs_prompt_rag": {
+          "equal_weight_order": "prompt_rag>prompt_only",
+          "stability": 0.8277
+        },
+        "prompt_only_vs_ontology_prompt_rag": {
+          "equal_weight_order": "ontology_prompt_rag>prompt_only",
+          "stability": 1.0
+        },
+        "prompt_only_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_text_rag>prompt_only",
+          "stability": 0.8193
+        },
+        "prompt_rag_vs_ontology_prompt_rag": {
+          "equal_weight_order": "ontology_prompt_rag>prompt_rag",
+          "stability": 1.0
+        },
+        "prompt_rag_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_text_rag>prompt_rag",
+          "stability": 0.8074
+        },
+        "ontology_prompt_rag_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_prompt_rag>ontology_text_rag",
+          "stability": 1.0
+        }
+      }
+    },
+    "model:mistral_7b": {
+      "equal_scores": {
+        "prompt_only": 0.7754499997557013,
+        "prompt_rag": 0.8446245842571494,
+        "ontology_prompt_rag": 0.9019189509565827,
+        "ontology_text_rag": 0.8787760276611107
+      },
+      "legacy_scores": {
+        "prompt_only": 0.7471597219168488,
+        "prompt_rag": 0.8164057303214366,
+        "ontology_prompt_rag": 0.8773986886957283,
+        "ontology_text_rag": 0.8484700345763885
+      },
+      "equal_ranks": {
+        "prompt_only": 4,
+        "prompt_rag": 3,
+        "ontology_prompt_rag": 1,
+        "ontology_text_rag": 2
+      },
+      "legacy_ranks": {
+        "prompt_only": 4,
+        "prompt_rag": 3,
+        "ontology_prompt_rag": 1,
+        "ontology_text_rag": 2
+      },
+      "rank_reversals": {
+        "prompt_only": false,
+        "prompt_rag": false,
+        "ontology_prompt_rag": false,
+        "ontology_text_rag": false
+      },
+      "first_place_proportions": {
+        "prompt_only": 0.0,
+        "prompt_rag": 0.0,
+        "ontology_prompt_rag": 1.0,
+        "ontology_text_rag": 0.0
+      },
+      "pairwise_rank_stability": {
+        "prompt_only_vs_prompt_rag": {
+          "equal_weight_order": "prompt_rag>prompt_only",
+          "stability": 1.0
+        },
+        "prompt_only_vs_ontology_prompt_rag": {
+          "equal_weight_order": "ontology_prompt_rag>prompt_only",
+          "stability": 1.0
+        },
+        "prompt_only_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_text_rag>prompt_only",
+          "stability": 0.9299
+        },
+        "prompt_rag_vs_ontology_prompt_rag": {
+          "equal_weight_order": "ontology_prompt_rag>prompt_rag",
+          "stability": 1.0
+        },
+        "prompt_rag_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_text_rag>prompt_rag",
+          "stability": 0.8362
+        },
+        "ontology_prompt_rag_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_prompt_rag>ontology_text_rag",
+          "stability": 1.0
+        }
+      }
+    },
+    "model:qwen2_5_7b": {
+      "equal_scores": {
+        "prompt_only": 0.8100202802548089,
+        "prompt_rag": 0.8501918242296499,
+        "ontology_prompt_rag": 0.9035180363606565,
+        "ontology_text_rag": 0.878224908029191
+      },
+      "legacy_scores": {
+        "prompt_only": 0.7875253503185111,
+        "prompt_rag": 0.8233647802870624,
+        "ontology_prompt_rag": 0.8793975454508206,
+        "ontology_text_rag": 0.8477811350364886
+      },
+      "equal_ranks": {
+        "prompt_only": 4,
+        "prompt_rag": 3,
+        "ontology_prompt_rag": 1,
+        "ontology_text_rag": 2
+      },
+      "legacy_ranks": {
+        "prompt_only": 4,
+        "prompt_rag": 3,
+        "ontology_prompt_rag": 1,
+        "ontology_text_rag": 2
+      },
+      "rank_reversals": {
+        "prompt_only": false,
+        "prompt_rag": false,
+        "ontology_prompt_rag": false,
+        "ontology_text_rag": false
+      },
+      "first_place_proportions": {
+        "prompt_only": 0.0635,
+        "prompt_rag": 0.0,
+        "ontology_prompt_rag": 0.9365,
+        "ontology_text_rag": 0.0
+      },
+      "pairwise_rank_stability": {
+        "prompt_only_vs_prompt_rag": {
+          "equal_weight_order": "prompt_rag>prompt_only",
+          "stability": 0.7667
+        },
+        "prompt_only_vs_ontology_prompt_rag": {
+          "equal_weight_order": "ontology_prompt_rag>prompt_only",
+          "stability": 0.9365
+        },
+        "prompt_only_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_text_rag>prompt_only",
+          "stability": 0.7574
+        },
+        "prompt_rag_vs_ontology_prompt_rag": {
+          "equal_weight_order": "ontology_prompt_rag>prompt_rag",
+          "stability": 1.0
+        },
+        "prompt_rag_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_text_rag>prompt_rag",
+          "stability": 0.7443
+        },
+        "ontology_prompt_rag_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_prompt_rag>ontology_text_rag",
+          "stability": 1.0
+        }
+      }
+    },
+    "model:qwen3_8b": {
+      "equal_scores": {
+        "prompt_only": 0.810106578494241,
+        "prompt_rag": 0.843405839883759,
+        "ontology_prompt_rag": 0.921412008058978,
+        "ontology_text_rag": 0.8807691736144599
+      },
+      "legacy_scores": {
+        "prompt_only": 0.7876332231178012,
+        "prompt_rag": 0.8156461887435875,
+        "ontology_prompt_rag": 0.9017650100737225,
+        "ontology_text_rag": 0.8522114670180748
+      },
+      "equal_ranks": {
+        "prompt_only": 4,
+        "prompt_rag": 3,
+        "ontology_prompt_rag": 1,
+        "ontology_text_rag": 2
+      },
+      "legacy_ranks": {
+        "prompt_only": 4,
+        "prompt_rag": 3,
+        "ontology_prompt_rag": 1,
+        "ontology_text_rag": 2
+      },
+      "rank_reversals": {
+        "prompt_only": false,
+        "prompt_rag": false,
+        "ontology_prompt_rag": false,
+        "ontology_text_rag": false
+      },
+      "first_place_proportions": {
+        "prompt_only": 0.0,
+        "prompt_rag": 0.0,
+        "ontology_prompt_rag": 1.0,
+        "ontology_text_rag": 0.0
+      },
+      "pairwise_rank_stability": {
+        "prompt_only_vs_prompt_rag": {
+          "equal_weight_order": "prompt_rag>prompt_only",
+          "stability": 0.7179
+        },
+        "prompt_only_vs_ontology_prompt_rag": {
+          "equal_weight_order": "ontology_prompt_rag>prompt_only",
+          "stability": 1.0
+        },
+        "prompt_only_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_text_rag>prompt_only",
+          "stability": 0.7715
+        },
+        "prompt_rag_vs_ontology_prompt_rag": {
+          "equal_weight_order": "ontology_prompt_rag>prompt_rag",
+          "stability": 1.0
+        },
+        "prompt_rag_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_text_rag>prompt_rag",
+          "stability": 0.8447
+        },
+        "ontology_prompt_rag_vs_ontology_text_rag": {
+          "equal_weight_order": "ontology_prompt_rag>ontology_text_rag",
+          "stability": 1.0
+        }
+      }
+    }
+  }
+}

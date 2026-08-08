@@ -1,0 +1,97 @@
+{
+  "dataset_section_purpose": "Documents the retrieval corpus so Conditions 2-4 are reproducible and comparable with Condition 1.",
+  "condition_definitions": [
+    {
+      "condition_number": 1,
+      "method": "prompt_only",
+      "condition_name": "Prompt-Only Generation",
+      "implementation": "No external retrieval and no ontology-derived context."
+    },
+    {
+      "condition_number": 2,
+      "method": "prompt_rag",
+      "condition_name": "Text-RAG Generation",
+      "implementation": "Attempts external Chroma vector retrieval; actual context exposure is audited per row."
+    },
+    {
+      "condition_number": 3,
+      "method": "ontology_prompt_rag",
+      "condition_name": "Ontology-Derived Structured Prompting RAG",
+      "implementation": "Attempts external RAG and adds a directly serialized PSQ-SCO semantic packet."
+    },
+    {
+      "condition_number": 4,
+      "method": "ontology_text_rag",
+      "condition_name": "Ontology-to-Text Vector RAG",
+      "implementation": "Attempts external Chroma vector retrieval and adds ontology-derived text selected by a deterministic lexical ranker; actual external-context exposure is audited per row, and the ontology-derived records are not embedded by the current implementation."
+    }
+  ],
+  "same_sources_across_conditions": "Text-RAG Generation, Ontology-Derived Structured Prompting RAG, and Ontology-to-Text Vector RAG attempt retrieval from the same PSQ_RAG_PROFILE=quality external corpus selection unless explicitly overridden; the evaluator separately reports rows where retrieval returned no external context. Prompt-Only Generation is the no-retrieval baseline.",
+  "kb_dir": "D:\\Japan_InternProject\\PSQ_SCO_Internship_Handover_2026-07-26\\genai_engine\\output",
+  "rag_profile": "quality",
+  "vector_database": "ChromaDB PersistentClient",
+  "vector_index_path": "D:\\Japan_InternProject\\PSQ_SCO_Internship_Handover_2026-07-26\\genai_engine\\chroma_db_quality",
+  "vector_space": "cosine HNSW",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2 (expected Chroma default because rag_engine.py does not pass a custom embedding_function)",
+  "embedding_model_status": "Expected from the official Chroma default-embedding documentation, not fully provenance-frozen for the historical generation run. The exact Chroma package version, model artifact hash, and embedding-function configuration were not stored in the generation records.",
+  "embedding_model_training_domain": "General-purpose sentence-pair representation learning, not a cybersecurity-ontology-specific model. The all-MiniLM-L6-v2 model card reports 384-dimensional embeddings, fine-tuning on more than one billion sentence pairs, and truncation beyond 256 word pieces.",
+  "embedding_model_domain_mismatch": "Because the model is general-purpose, source relevance for phishing/smishing/vishing and verbalized OWL records must be treated as an empirical retrieval question rather than assumed from the model name.",
+  "ontology_text_selection": "The ontology-derived records are selected by a deterministic lexical relevance score, mandatory document-type coverage, and optional deterministic greedy relation walk. They are not stored in or retrieved from Chroma by the current implementation.",
+  "ontology_walk_algorithm": {
+    "scientific_name": "deterministic greedy relevance walk",
+    "legacy_metadata_alias": "deterministic_random_walk_graph_to_text",
+    "start_nodes": "up to five IDs ordered as selected templates, fixed-order validation rules, then evidence sources",
+    "depth": "walk_depth=2 by default, producing depth 0, 1, and 2 nodes per start when edges exist",
+    "edge_score": "count of case query terms occurring in property, target ID, target label, target definition, or target types; +1 when target is a known ontology record",
+    "tie_break": "descending score, then property name ascending, then target ID ascending",
+    "transition": "choose exactly one highest-ranked outgoing property-target pair at each step",
+    "stopping": "stop at maximum depth, missing current record, or no outgoing candidate",
+    "randomness": "none",
+    "cycle_policy": "no visited-node exclusion in the historical implementation; depth bound guarantees termination",
+    "frozen_run_exposure": "The evaluated graph-walk variant declared the walk for 1/1 Condition-4 rows and exported an identifiable selected_subgraph_walk context for 1/1. Ontology context delivery is separate from external text-RAG delivery, which occurred for 1/1 rows."
+  },
+  "evaluated_generation_profile": {
+    "mode4_row_count": 1,
+    "graph_walk_required_rows": 1,
+    "graph_walk_exposed_rows": 1,
+    "graph_walk_exposure_rate": 1.0,
+    "external_rag_present_rows": 1,
+    "external_rag_exposure_rate": 1.0,
+    "schema_safe_repair_rows": 0,
+    "schema_safe_repair_rate": 0.0,
+    "engine_validation_passed_rows": 1,
+    "engine_validation_pass_rate": 1.0,
+    "ontology_text_document_count_distribution": {
+      "5": 1
+    },
+    "interpretation": "The evaluated graph-walk variant declared the walk for 1/1 Condition-4 rows and exported an identifiable selected_subgraph_walk context for 1/1. Ontology context delivery is separate from external text-RAG delivery, which occurred for 1/1 rows."
+  },
+  "chunking": "One JSONL record is converted into one retrieval document by concatenating available text/subject/body/messages/dialogue/cue fields.",
+  "preprocessing": "JSONL rows with short text are skipped; exact lowercased text hashes are deduplicated; profile caps limit very large corpora.",
+  "retrieval_settings": {
+    "query": "role, job title hint, channel, variant, knowledge type, interaction pattern, development focus, age group",
+    "initial_query_n": "max(n_results * 16, 64)",
+    "final_n_results_generation": "configured by --n-rag-examples; final paper ontology-text runs use 1 external RAG example",
+    "metadata_filters": [
+      "channel",
+      "language",
+      "retrieval_mode",
+      "is_scam",
+      "knowledge_type",
+      "difficulty_band",
+      "age_band_fit",
+      "stage_band_fit"
+    ],
+    "fallback_ladders": [
+      "strict",
+      "drop_age_stage",
+      "drop_knowledge_difficulty",
+      "mixed_mode"
+    ]
+  },
+  "selected_file_count": 0,
+  "raw_document_count_before_caps": 0,
+  "used_document_count_after_caps": 0,
+  "chroma_index_metadata": {},
+  "sources": []
+}

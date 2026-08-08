@@ -1,0 +1,233 @@
+{
+  "version": "9.1.0",
+  "ontology_namespace": "http://personashield.ait.ac.th/ontology/odcgct#",
+  "engine_contract": "PersonaShieldQuest-GenAI-Engine v4.3/v4.4",
+  "channels": {
+    "email": "Email",
+    "sms": "SMSChat",
+    "voice": "VoiceCall"
+  },
+  "variants": {
+    "fake": "FakeVariant",
+    "real": "RealVariant"
+  },
+  "attack_types": {
+    "phishing": "Phishing",
+    "smishing": "Smishing",
+    "vishing": "Vishing",
+    "legitimate": "LegitimateCommunication"
+  },
+  "roles": {
+    "IT": "Role_IT",
+    "FINANCE": "Role_FINANCE",
+    "HR": "Role_HR",
+    "MANAGEMENT": "Role_MANAGEMENT",
+    "OTHER": "Role_OTHER"
+  },
+  "age_groups": {
+    "15_21": "Age_15_21",
+    "22_35": "Age_22_35",
+    "36_45": "Age_36_45",
+    "46_59": "Age_46_59",
+    "60_90": "Age_60_90"
+  },
+  "retrieval_modes": {
+    "THAI_LOCAL": "THAI_LOCAL",
+    "ENGLISH_GLOBAL": "ENGLISH_GLOBAL",
+    "HYBRID_COMPARE": "HYBRID_COMPARE"
+  },
+  "difficulty_bands": {
+    "easy": "Difficulty_Introductory",
+    "moderate": "Difficulty_Developing",
+    "hard": "Difficulty_Advanced"
+  },
+  "stages": {
+    "BEGINNER_INTRODUCTORY": {
+      "ontology_id": "BEGINNER_INTRODUCTORY",
+      "index": 1,
+      "difficulty_band": "easy",
+      "interaction_pattern": "Recognize-Explain",
+      "vocabulary_band": "V1_FOUNDATION",
+      "ontology_difficulty": "Difficulty_Introductory",
+      "macro_stage": "Macro_Beginner",
+      "micro_stage": "Micro_Introductory"
+    },
+    "BEGINNER_DEVELOPING": {
+      "ontology_id": "BEGINNER_DEVELOPING",
+      "index": 2,
+      "difficulty_band": "easy",
+      "interaction_pattern": "Identify-Classify",
+      "vocabulary_band": "V2_GUIDED",
+      "ontology_difficulty": "Difficulty_Introductory",
+      "macro_stage": "Macro_Beginner",
+      "micro_stage": "Micro_Developing"
+    },
+    "BEGINNER_ADVANCED": {
+      "ontology_id": "BEGINNER_ADVANCED",
+      "index": 3,
+      "difficulty_band": "easy",
+      "interaction_pattern": "Inspect-Verify",
+      "vocabulary_band": "V2_GUIDED",
+      "ontology_difficulty": "Difficulty_Introductory",
+      "macro_stage": "Macro_Beginner",
+      "micro_stage": "Micro_Advanced"
+    },
+    "INTERMEDIATE_INTRODUCTORY": {
+      "ontology_id": "INTERMEDIATE_INTRODUCTORY",
+      "index": 4,
+      "difficulty_band": "moderate",
+      "interaction_pattern": "Identify-Classify",
+      "vocabulary_band": "V3_APPLIED",
+      "ontology_difficulty": "Difficulty_Developing",
+      "macro_stage": "Macro_Intermediate",
+      "micro_stage": "Micro_Introductory"
+    },
+    "INTERMEDIATE_DEVELOPING": {
+      "ontology_id": "INTERMEDIATE_DEVELOPING",
+      "index": 5,
+      "difficulty_band": "moderate",
+      "interaction_pattern": "Compare-Choose",
+      "vocabulary_band": "V3_APPLIED",
+      "ontology_difficulty": "Difficulty_Developing",
+      "macro_stage": "Macro_Intermediate",
+      "micro_stage": "Micro_Developing"
+    },
+    "INTERMEDIATE_ADVANCED": {
+      "ontology_id": "INTERMEDIATE_ADVANCED",
+      "index": 6,
+      "difficulty_band": "moderate",
+      "interaction_pattern": "Challenge-Report",
+      "vocabulary_band": "V4_PROFESSIONAL",
+      "ontology_difficulty": "Difficulty_Developing",
+      "macro_stage": "Macro_Intermediate",
+      "micro_stage": "Micro_Advanced"
+    },
+    "EXPERT_INTRODUCTORY": {
+      "ontology_id": "EXPERT_INTRODUCTORY",
+      "index": 7,
+      "difficulty_band": "hard",
+      "interaction_pattern": "Inspect-Verify",
+      "vocabulary_band": "V4_PROFESSIONAL",
+      "ontology_difficulty": "Difficulty_Advanced",
+      "macro_stage": "Macro_Expert",
+      "micro_stage": "Micro_Introductory"
+    },
+    "EXPERT_DEVELOPING": {
+      "ontology_id": "EXPERT_DEVELOPING",
+      "index": 8,
+      "difficulty_band": "hard",
+      "interaction_pattern": "Reflect-Justify",
+      "vocabulary_band": "V5_STRATEGIC",
+      "ontology_difficulty": "Difficulty_Advanced",
+      "macro_stage": "Macro_Expert",
+      "micro_stage": "Micro_Developing"
+    },
+    "EXPERT_ADVANCED": {
+      "ontology_id": "EXPERT_ADVANCED",
+      "index": 9,
+      "difficulty_band": "hard",
+      "interaction_pattern": "Design-Respond",
+      "vocabulary_band": "V5_STRATEGIC",
+      "ontology_difficulty": "Difficulty_Advanced",
+      "macro_stage": "Macro_Expert",
+      "micro_stage": "Micro_Advanced"
+    }
+  },
+  "red_flags": {
+    "urgency_pressure": "RF_UrgencyPressure",
+    "credential_request": "RF_CredentialRequest",
+    "otp_request": "RF_OTPRequest",
+    "suspicious_link": "RF_SuspiciousLink",
+    "sender_mismatch": "RF_SenderMismatch",
+    "unexpected_attachment": "RF_UnexpectedAttachment",
+    "unverified_caller": "RF_UnverifiedCaller",
+    "unusual_payment": "RF_UnusualPayment",
+    "workflow_bypass": "RF_WorkflowBypass",
+    "remote_access_request": "RF_RemoteAccessRequest"
+  },
+  "persuasion_cues": {
+    "authority": "Cue_Authority",
+    "urgency": "Cue_Urgency",
+    "fear": "Cue_Fear",
+    "scarcity": "Cue_Scarcity",
+    "social_proof": "Cue_SocialProof",
+    "reciprocity": "Cue_Reciprocity",
+    "curiosity": "Cue_Curiosity"
+  },
+  "safe_indicators": {
+    "known_sender": "SI_KnownSender",
+    "expected_workflow": "SI_ExpectedWorkflow",
+    "independent_verification": "SI_IndependentVerification"
+  },
+  "safe_responses": {
+    "pause_and_verify": "Action_PauseAndVerify",
+    "do_not_click_or_reply": "Action_DoNotClickOrReply",
+    "end_call_and_verify": "Action_EndCallAndVerify",
+    "continue_approved_workflow": "Action_ContinueApprovedWorkflow"
+  },
+  "ontology_file": "ontology/personashield-psq-sco-v9.1.owl",
+  "threat_actions": {
+    "credential_harvesting": "TA_CredentialHarvesting",
+    "payment_diversion": "TA_PaymentDiversion",
+    "workflow_bypass": "TA_WorkflowBypass",
+    "remote_access_request": "TA_RemoteAccess"
+  },
+  "selection_dimensions": [
+    "channel",
+    "variant",
+    "attack_type",
+    "difficulty_band",
+    "stage_band_fit",
+    "role_fit",
+    "age_band_fit",
+    "corpus_mode"
+  ],
+  "difficulty_display_labels": {
+    "Difficulty_Introductory": "Introductory",
+    "Difficulty_Developing": "Developing",
+    "Difficulty_Advanced": "Advanced"
+  },
+  "difficulty_mapping_note": "Human-facing ontology labels are introductory/developing/advanced; engine literals remain easy/moderate/hard.",
+  "age_group_classes": {
+    "15_21": "Age15To21Group",
+    "22_35": "Age22To35Group",
+    "36_45": "Age36To45Group",
+    "46_59": "Age46To59Group",
+    "60_90": "Age60To90Group"
+  },
+  "macro_stages": {
+    "BEGINNER": "Macro_Beginner",
+    "INTERMEDIATE": "Macro_Intermediate",
+    "EXPERT": "Macro_Expert"
+  },
+  "micro_stages": {
+    "INTRODUCTORY": "Micro_Introductory",
+    "DEVELOPING": "Micro_Developing",
+    "ADVANCED": "Micro_Advanced"
+  },
+  "stage_model_note": "The nine engine stage IDs remain stable compatibility values. Each is now decomposed through hasMacroStage and hasMicroStage into reusable controlled individuals.",
+  "ontology_name": "PersonaShield Quest Scenario Control Ontology (PSQ-SCO)",
+  "namespace": "http://personashield.ait.ac.th/ontology/psq-sco#",
+  "reviewer_aligned_v9_additions": {
+    "content_quality_rules": [
+      "template_eligibility",
+      "required_attack_structure",
+      "legitimate_scenario_separation",
+      "channel_consistency",
+      "persona_fit",
+      "evidence_requirement",
+      "quality_acceptance",
+      "quality_rejection"
+    ],
+    "validation_decisions": [
+      "accept",
+      "reject",
+      "review"
+    ],
+    "runtime_placeholders": [
+      "performance_state",
+      "mood_context_placeholder"
+    ]
+  },
+  "learning_design_module_status": "outside_psq_sco_v9_1"
+}

@@ -1,0 +1,5 @@
+method,condition_number,condition_name,model_group_count,n_total,embedding_diversity_mean,mean_pairwise_cosine_similarity_mean,self_bleu_mean,self_bleu_diversity_mean,embedding_backend,embedding_model,self_bleu_backend
+prompt_only,1,Prompt-Only Generation,1,1,,,,,local_hashing_ngram,scenario_structure_hashing_v1_512d,internal_smoothed_bleu
+prompt_rag,2,Text-RAG Generation,1,1,,,,,local_hashing_ngram,scenario_structure_hashing_v1_512d,internal_smoothed_bleu
+ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,1,1,,,,,local_hashing_ngram,scenario_structure_hashing_v1_512d,internal_smoothed_bleu
+ontology_text_rag,4,Ontology-to-Text Vector RAG,1,1,,,,,local_hashing_ngram,scenario_structure_hashing_v1_512d,internal_smoothed_bleu

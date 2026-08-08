@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://personashield.ait.ac.th/schema/semantic-packet-v9.1.json",
+  "title": "PersonaShield PSQ-SCO semantic control packet v9.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "system_condition",
+    "ontology_version",
+    "learner_constraints",
+    "eligible_template",
+    "attack_structure",
+    "evidence_grounding",
+    "generation_constraints",
+    "provenance",
+    "quality_rules",
+    "validation_decision",
+    "quality_score",
+    "error_analysis"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "system_condition": {
+      "enum": [
+        "A_PROMPT_ONLY",
+        "B_TEXT_RAG",
+        "C_ONTOLOGY_RAG"
+      ]
+    },
+    "ontology_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "learner_constraints": {
+      "type": "object"
+    },
+    "eligible_template": {
+      "type": "object"
+    },
+    "attack_structure": {
+      "type": "object"
+    },
+    "evidence_grounding": {
+      "type": "object"
+    },
+    "generation_constraints": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "quality_rules": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "validation_decision": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "quality_score": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "error_analysis": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

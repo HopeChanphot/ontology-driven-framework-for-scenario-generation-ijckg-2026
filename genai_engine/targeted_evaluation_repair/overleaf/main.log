@@ -1,0 +1,499 @@
+**
+(main.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-02-24> (llncs.cls
+Document Class: llncs 2024/01/29 v2.24 
+ LaTeX document class for Lecture Notes in Computer Science
+(article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count181
+\c@section=\count182
+\c@subsection=\count183
+\c@subsubsection=\count184
+\c@paragraph=\count185
+\c@subparagraph=\count186
+\c@figure=\count187
+\c@table=\count188
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (multicol.sty
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+\c@tracingmulticols=\count189
+\mult@box=\box50
+\multicol@leftmargin=\dimen139
+\c@unbalance=\count190
+\c@collectmore=\count191
+\doublecol@number=\count192
+\multicoltolerance=\count193
+\multicolpretolerance=\count194
+\full@width=\dimen140
+\page@free=\dimen141
+\premulticols=\dimen142
+\postmulticols=\dimen143
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box51
+\last@line=\box52
+\maxbalancingoverflow=\dimen144
+\mult@rightbox=\box53
+\mult@grightbox=\box54
+\mult@firstbox=\box55
+\mult@gfirstbox=\box56
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\c@minrows=\count195
+\c@columnbadness=\count196
+\c@finalcolumnbadness=\count197
+\last@try=\dimen145
+\multicolovershoot=\dimen146
+\multicolundershoot=\dimen147
+\mult@nat@firstbox=\box93
+\colbreak@box=\box94
+\mc@col@check@num=\count198
+) (aliascnt.sty
+Package: aliascnt 2018/09/07 v1.5 Alias counters (HO)
+)
+\c@chapter=\count199
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 379.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 380.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 381.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 382.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 383.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 384.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 385.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 386.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 387.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 388.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 389.
+LaTeX Info: Redefining \vec on input line 394.
+\tocchpnum=\dimen148
+\tocsecnum=\dimen149
+\tocsectotal=\dimen150
+\tocsubsecnum=\dimen151
+\tocsubsectotal=\dimen152
+\tocsubsubsecnum=\dimen153
+\tocsubsubsectotal=\dimen154
+\tocparanum=\dimen155
+\tocparatotal=\dimen156
+\tocsubparanum=\dimen157
+\@tempcntc=\count266
+\fnindent=\dimen158
+\c@@inst=\count267
+\c@@auth=\count268
+\c@auco=\count269
+\instindent=\dimen159
+\authrun=\box95
+\authorrunning=\toks16
+\tocauthor=\toks17
+\titrun=\box96
+\titlerunning=\toks18
+\toctitle=\toks19
+\c@theorem=\count270
+\c@case=\count271
+\c@conjecture=\count272
+\c@corollary=\count273
+\c@definition=\count274
+\c@example=\count275
+\c@exercise=\count276
+\c@lemma=\count277
+\c@note=\count278
+\c@problem=\count279
+\c@property=\count280
+\c@proposition=\count281
+\c@question=\count282
+\c@solution=\count283
+\c@remark=\count284
+\headlineindent=\dimen160
+) (fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+ (t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
+(graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+) (graphics.sty
+Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+ (trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: xetex.def on input line 107.
+ (xetex.def
+File: xetex.def 2021/03/18 v5.0k Graphics/color driver for xetex
+))
+\Gin@req@height=\dimen161
+\Gin@req@width=\dimen162
+) (amsmath.sty
+Package: amsmath 2021/10/15 v2.17l AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen163
+)) (amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen164
+) (amsopn.sty
+Package: amsopn 2021/08/26 v2.02 operator names
+)
+\inf@bad=\count285
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count286
+\leftroot@=\count287
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count288
+\DOTSCASE@=\count289
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box97
+\strutbox@=\box98
+\big@size=\dimen165
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count290
+\c@MaxMatrixCols=\count291
+\dotsspace@=\muskip16
+\c@parentequation=\count292
+\dspbrk@lvl=\count293
+\tag@help=\toks22
+\row@=\count294
+\column@=\count295
+\maxfields@=\count296
+\andhelp@=\toks23
+\eqnshift@=\dimen166
+\alignsep@=\dimen167
+\tagshift@=\dimen168
+\tagwidth@=\dimen169
+\totwidth@=\dimen170
+\lineht@=\dimen171
+\@envbody=\toks24
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2938.
+LaTeX Info: Redefining \] on input line 2939.
+) (array.sty
+Package: array 2021/10/04 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen172
+\ar@mcellbox=\box99
+\extrarowheight=\dimen173
+\NC@list=\toks26
+\extratabsurround=\skip54
+\backup@length=\skip55
+\ar@cellbox=\box100
+) (booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen174
+\lightrulewidth=\dimen175
+\cmidrulewidth=\dimen176
+\belowrulesep=\dimen177
+\belowbottomsep=\dimen178
+\aboverulesep=\dimen179
+\abovetopsep=\dimen180
+\cmidrulesep=\dimen181
+\cmidrulekern=\dimen182
+\defaultaddspace=\dimen183
+\@cmidla=\count297
+\@cmidlb=\count298
+\@aboverulesep=\dimen184
+\@belowrulesep=\dimen185
+\@thisruleclass=\count299
+\@lastruleclass=\count300
+\@thisrulewidth=\dimen186
+) (tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen187
+\TX@old@table=\dimen188
+\TX@old@col=\dimen189
+\TX@target=\dimen190
+\TX@delta=\dimen191
+\TX@cols=\count301
+\TX@ftn=\toks27
+) (microtype.sty
+Package: microtype 2022/03/14 v3.0d Micro-typographical refinements (RS)
+ (etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count302
+)
+\MT@toks=\toks28
+\MT@tempbox=\box101
+\MT@count=\count303
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1027.
+LaTeX Info: Redefining \leftprotrusion on input line 1028.
+LaTeX Info: Redefining \rightprotrusion on input line 1036.
+LaTeX Info: Redefining \textls on input line 1195.
+\MT@outer@kern=\dimen192
+LaTeX Info: Redefining \textmicrotypecontext on input line 1781.
+\MT@listname@count=\count304
+
+(microtype-xetex.def
+File: microtype-xetex.def 2022/03/14 v3.0d Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 236.
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (microtype.cfg
+File: microtype.cfg 2022/03/14 v3.0d microtype main configuration file (RS)
+)) (url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (l3backend-xetex.def
+File: l3backend-xetex.def 2022-02-07 L3 backend support: XeTeX
+\c__kernel_sys_dvipdfmx_version_int=\count305
+\l__color_backend_stack_int=\count306
+\g__color_backend_stack_int=\count307
+\g__graphics_track_int=\count308
+\l__pdf_internal_box=\box102
+\g__pdf_backend_object_int=\count309
+\g__pdf_backend_annotation_int=\count310
+\g__pdf_backend_link_int=\count311
+)
+(main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
+7.
+ (ts1cmr.fd
+File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Info: Redefining \microtypecontext on input line 27.
+Package microtype Info: Applying patch `item' on input line 27.
+Package microtype Info: Applying patch `toc' on input line 27.
+Package microtype Info: Applying patch `eqnum' on input line 27.
+Package microtype Info: Applying patch `footnote' on input line 27.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of spacing.
+Package microtype Info: No adjustment of kerning.
+ (mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
+4.
+ (t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \hbox (badness 1308) in paragraph at lines 57--73
+\T1/lmr/m/n/9 ines on-tol-ogy func-tion-al-ity, method-invariant sce-nario con-
+for-mance,
+ []
+
+[1
+
+] [2]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3] [4]
+File: PSQ_SCO_Compact_Framework_Fig1_Updated.png Graphic file (type bmp)
+<PSQ_SCO_Compact_Framework_Fig1_Updated.png>
+ [5] [6] [7] [8] [9] [10]
+LaTeX Font Info:    Calculating math sizes for size <6.25> on input line 612.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.37497> not available
+(Font)              size <5> substituted on input line 612.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <3.125> not available
+(Font)              size <5> substituted on input line 612.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.37497> not available
+(Font)              size <5> substituted on input line 612.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <3.125> not available
+(Font)              size <5> substituted on input line 612.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.37497> not available
+(Font)              size <5> substituted on input line 612.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <3.125> not available
+(Font)              size <5> substituted on input line 612.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12] [13] [14] (main.bbl
+Underfull \hbox (badness 2181) in paragraph at lines 24--27
+[]\T1/lmr/m/n/7.8 Becker, W., Saisana, M., Paruolo, P., Van-de-cas-teele, I.: W
+eights and im-por-tance
+ []
+
+
+Underfull \hbox (badness 2310) in paragraph at lines 24--27
+\T1/lmr/m/n/7.8 in com-pos-ite in-di-ca-tors: Clos-ing the gap. Eco-log-i-cal I
+n-di-ca-tors \T1/lmr/bx/n/7.8 80\T1/lmr/m/n/7.8 , 12--22 (2017).
+ []
+
+LaTeX Font Info:    Calculating math sizes for size <7.8> on input line 30.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.45998> not available
+(Font)              size <5> substituted on input line 30.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <3.9> not available
+(Font)              size <5> substituted on input line 30.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.45998> not available
+(Font)              size <5> substituted on input line 30.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <3.9> not available
+(Font)              size <5> substituted on input line 30.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.45998> not available
+(Font)              size <5> substituted on input line 30.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <3.9> not available
+(Font)              size <5> substituted on input line 30.
+
+
+Underfull \hbox (badness 5954) in paragraph at lines 63--66
+[]\T1/lmr/m/n/7.8 Hashem, T., Wang, W., Wi-jaya, D.T., et al.: Gen-er-at-ing fa
+ith-ful text from
+ []
+
+
+Underfull \hbox (badness 5217) in paragraph at lines 63--66
+\T1/lmr/m/n/7.8 a knowl-edge graph with noisy ref-er-ence text. In: INLG. pp. 1
+06--122 (2023).
+ []
+
+[15]
+Underfull \hbox (badness 3428) in paragraph at lines 72--75
+[]\T1/lmr/m/n/7.8 Keet, C.M., ^^8aawrynow-icz, A.: Test-driven de-vel-op-ment o
+f on-tolo-gies. In: ESWC
+ []
+
+
+Underfull \hbox (badness 1014) in paragraph at lines 72--75
+\T1/lmr/m/n/7.8 2016. Lec-ture Notes in Com-puter Sci-ence, vol. 9678, pp. 642-
+-657. Springer (2016).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--86
+[]\T1/lmr/m/n/7.8 Lewis, P., Perez, E., Pik-tus, A., et al.: Retrieval-augmente
+d gen-er-a-tion for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--86
+\T1/lmr/m/n/7.8 knowledge-intensive NLP tasks. In: Ad-vances in Neu-ral In-for-
+ma-tion Pro-cess-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--86
+\T1/lmr/m/n/7.8 ing Sys-tems. vol. 33 (2020), $https : / / proceedings . neurip
+s . cc / paper / 2020 / hash /
+ []
+
+
+Underfull \hbox (badness 4193) in paragraph at lines 88--92
+[]\T1/lmr/m/n/7.8 MITRE: ATT&CK phish-ing tech-niques T1566 and T1566.004, and 
+CAPEC at-
+ []
+
+
+Underfull \hbox (badness 2096) in paragraph at lines 94--97
+[]\T1/lmr/m/n/7.8 Pan, S., Luo, L., Wang, Y., et al.: Uni-fy-ing large lan-guag
+e mod-els and knowl-
+ []
+
+) [16] (main.aux)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.875pt have occurred.
+
+ )
+Output written on main.xdv (16 pages, 64464 bytes).

@@ -1,0 +1,15 @@
+PS C:\Users\user\PersonaShieldQuest-Ontology> & ".\.venv-sparql-v8.2\Scripts\python.exe" scripts\check_kg_completeness_v9_1.py
+
+# KG completeness and missing-relationship result
+status: PASS
+bounded_completeness_claim: complete_for_CQ1_CQ2_CQ3_CQ4_only
+required_checks: 4362
+passed_checks: 4362
+missing_relationships_detected: 0
+completeness_ratio: 1.0
+dangling_local_reference_count: 0
+malformed_owl_restrictions: 0
+CQ1 coverage: 72 / 72
+CQ2 coverage: 30 / 30
+CQ3 coverage: 6 / 6
+CQ4 coverage: 12 / 12

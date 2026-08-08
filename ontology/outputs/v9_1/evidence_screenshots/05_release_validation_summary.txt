@@ -1,0 +1,18 @@
+PS C:\Users\user\PersonaShieldQuest-Ontology> & ".\.venv-sparql-v8.2\Scripts\python.exe"
+>> scripts\validate_psq_sco_v9_1_no_pedagogy.py
+
+# Complete ontology release validation
+status: PASS
+classes: 73
+object_properties: 49
+data_properties: 39
+individuals: 133
+triple_count: 3229
+removed_scope_status: PASS
+removed_scope_graph_hits: 0
+removed_scope_literal_hits: 0
+runtime_removed_scope_status: PASS
+owl_restriction_status: PASS
+ask_validation: 8 / 8 PASS
+errors: []
+warnings: []

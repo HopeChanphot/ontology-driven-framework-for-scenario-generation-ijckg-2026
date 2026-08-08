@@ -1,0 +1,80 @@
+﻿{
+    "model":  "qwen3_8b",
+    "scenario_file":  "D:\\PersonaShieldQuest-GenAI-Engine\\output\\experiments\\paper120_mode4_graph_walk_v1\\20260723_030518\\qwen3_8b\\scenarios_ontology_text_rag.jsonl",
+    "scenario_file_sha256":  "A9F5AC9BE1B8462D164CBC7494CF8F57D86CA91CA122060D4CFBC93CC4DB7CC4",
+    "expected_rows":  120,
+    "observed_rows":  120,
+    "graph_walk_rows":  120,
+    "graph_walk_coverage":  1,
+    "prompt_metadata_graph_walk_rows":  120,
+    "scenario_level_ontology_trace_rows":  80,
+    "scenario_level_ontology_trace_missing_rows":  40,
+    "schema_safe_repair_rows":  40,
+    "validation_passed_rows":  44,
+    "validation_failed_rows":  76,
+    "frozen_case_set_rows":  120,
+    "five_document_rows":  120,
+    "live_llm_rows":  120,
+    "external_rag_present_rows":  80,
+    "verification_passed":  true,
+    "errors":  [
+
+               ],
+    "warnings":  [
+                     "Scenario-level ontology trace is absent from 40 rows; prompt metadata is used to verify graph-walk exposure for those rows.",
+                     "40 rows contain the engine\u0027s schema-safe repair fallback after a live response failed ScenarioContent validation.",
+                     "76 rows failed one or more post-generation quality rules; retain them for transparent evaluation or rerun them under a separately declared recovery policy.",
+                     "External RAG returned at least one example for 80 of 120 rows; ontology graph-walk context was still present in all verified graph-walk rows."
+                 ],
+    "missing_walk_case_ids":  [
+
+                              ],
+    "wrong_case_set_case_ids":  [
+
+                                ],
+    "wrong_document_counts":  [
+
+                              ],
+    "scenario_trace_missing_case_ids":  [
+                                            "PSQ-SCO-120-081",
+                                            "PSQ-SCO-120-082",
+                                            "PSQ-SCO-120-083",
+                                            "PSQ-SCO-120-084",
+                                            "PSQ-SCO-120-085",
+                                            "PSQ-SCO-120-086",
+                                            "PSQ-SCO-120-087",
+                                            "PSQ-SCO-120-088",
+                                            "PSQ-SCO-120-089",
+                                            "PSQ-SCO-120-090",
+                                            "PSQ-SCO-120-091",
+                                            "PSQ-SCO-120-092",
+                                            "PSQ-SCO-120-093",
+                                            "PSQ-SCO-120-094",
+                                            "PSQ-SCO-120-095",
+                                            "PSQ-SCO-120-096",
+                                            "PSQ-SCO-120-097",
+                                            "PSQ-SCO-120-098",
+                                            "PSQ-SCO-120-099",
+                                            "PSQ-SCO-120-100",
+                                            "PSQ-SCO-120-101",
+                                            "PSQ-SCO-120-102",
+                                            "PSQ-SCO-120-103",
+                                            "PSQ-SCO-120-104",
+                                            "PSQ-SCO-120-105",
+                                            "PSQ-SCO-120-106",
+                                            "PSQ-SCO-120-107",
+                                            "PSQ-SCO-120-108",
+                                            "PSQ-SCO-120-109",
+                                            "PSQ-SCO-120-110",
+                                            "PSQ-SCO-120-111",
+                                            "PSQ-SCO-120-112",
+                                            "PSQ-SCO-120-113",
+                                            "PSQ-SCO-120-114",
+                                            "PSQ-SCO-120-115",
+                                            "PSQ-SCO-120-116",
+                                            "PSQ-SCO-120-117",
+                                            "PSQ-SCO-120-118",
+                                            "PSQ-SCO-120-119",
+                                            "PSQ-SCO-120-120"
+                                        ]
+}

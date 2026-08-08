@@ -1,0 +1,5 @@
+granularity,model_key,method,condition_number,condition_name,n,embedding_backend,embedding_model,mean_pairwise_cosine_similarity,embedding_diversity,self_bleu_backend,self_bleu,self_bleu_diversity,interpretation
+model_method,qwen2_5_7b,prompt_only,1,Prompt-Only Generation,1,local_hashing_ngram,scenario_structure_hashing_v1_512d,,,internal_smoothed_bleu,,,not available
+model_method,qwen2_5_7b,prompt_rag,2,Text-RAG Generation,1,local_hashing_ngram,scenario_structure_hashing_v1_512d,,,internal_smoothed_bleu,,,not available
+model_method,qwen2_5_7b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,1,local_hashing_ngram,scenario_structure_hashing_v1_512d,,,internal_smoothed_bleu,,,not available
+model_method,qwen2_5_7b,ontology_text_rag,4,Ontology-to-Text Vector RAG,1,local_hashing_ngram,scenario_structure_hashing_v1_512d,,,internal_smoothed_bleu,,,not available

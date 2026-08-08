@@ -1,0 +1,34 @@
+{
+  "run_id": "qwen3_8b",
+  "updated_at": "2026-07-23T06:03:42.514411",
+  "engine": "psq_sco_generation",
+  "case_set": "paper_120",
+  "llm": "qwen3_8b",
+  "mode": "ontology_text_rag",
+  "selected_modes": [
+    "ontology_text_rag"
+  ],
+  "selected_case_ids": [],
+  "completed_results": 120,
+  "attempted_or_recorded_results": 120,
+  "total_expected_results": 120,
+  "remaining_results": 0,
+  "resume_dir": "D:\\PersonaShieldQuest-GenAI-Engine\\output\\experiments\\paper120_mode4_graph_walk_v1\\20260723_030518\\qwen3_8b",
+  "require_live_llm": true,
+  "n_rag_examples": 1,
+  "ontology_text_doc_limit": 5,
+  "llm_timeout": 1200,
+  "llm_max_tokens": 1800,
+  "llm_num_ctx": 4096,
+  "llm_temperature": 0.2,
+  "llm_parse_retries": 2,
+  "compact_generation_prompt": true,
+  "latest_case_id": "PSQ-SCO-120-120",
+  "latest_mode": "ontology_text_rag",
+  "latest_validation_passed": false,
+  "latest_error": null,
+  "output_files": {
+    "scenarios_jsonl": "D:\\PersonaShieldQuest-GenAI-Engine\\output\\experiments\\paper120_mode4_graph_walk_v1\\20260723_030518\\qwen3_8b\\scenarios.jsonl",
+    "scenarios_ontology_text_rag_jsonl": "D:\\PersonaShieldQuest-GenAI-Engine\\output\\experiments\\paper120_mode4_graph_walk_v1\\20260723_030518\\qwen3_8b\\scenarios_ontology_text_rag.jsonl"
+  }
+}

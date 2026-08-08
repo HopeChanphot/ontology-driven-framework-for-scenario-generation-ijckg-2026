@@ -1,0 +1,74 @@
+{
+  "ontology_version": "9.1.0",
+  "validation_type": "SPARQL ASK competency-question cases",
+  "case_count": 8,
+  "passed_count": 8,
+  "failed_count": 0,
+  "status": "PASS",
+  "cases": [
+    {
+      "test_id": "CQ1-NEG-001",
+      "query_file": "queries/v9_1/validation/CQ1-NEG-001.ask.rq",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "execution_ms": 165.641
+    },
+    {
+      "test_id": "CQ1-POS-001",
+      "query_file": "queries/v9_1/validation/CQ1-POS-001.ask.rq",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "execution_ms": 5.333
+    },
+    {
+      "test_id": "CQ2-NEG-001",
+      "query_file": "queries/v9_1/validation/CQ2-NEG-001.ask.rq",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "execution_ms": 6.143
+    },
+    {
+      "test_id": "CQ2-POS-001",
+      "query_file": "queries/v9_1/validation/CQ2-POS-001.ask.rq",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "execution_ms": 5.598
+    },
+    {
+      "test_id": "CQ3-NEG-001",
+      "query_file": "queries/v9_1/validation/CQ3-NEG-001.ask.rq",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "execution_ms": 8.168
+    },
+    {
+      "test_id": "CQ3-POS-001",
+      "query_file": "queries/v9_1/validation/CQ3-POS-001.ask.rq",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "execution_ms": 31.905
+    },
+    {
+      "test_id": "CQ4-NEG-001",
+      "query_file": "queries/v9_1/validation/CQ4-NEG-001.ask.rq",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "execution_ms": 8.161
+    },
+    {
+      "test_id": "CQ4-POS-001",
+      "query_file": "queries/v9_1/validation/CQ4-POS-001.ask.rq",
+      "expected": true,
+      "actual": true,
+      "passed": true,
+      "execution_ms": 5.874
+    }
+  ]
+}

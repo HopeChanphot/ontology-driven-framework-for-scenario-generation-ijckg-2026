@@ -1,0 +1,5 @@
+model_key,method,condition_number,condition_name,n,overall_conformance_mean,overall_conformance_median,overall_conformance_sd,common_case_concept_f1_mean,all_controls_exact_match_rate,contradiction_free_pass_rate
+qwen2_5_7b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,1,0.900804289544236,0.900804289544236,0.0,1.0,1,1
+qwen2_5_7b,ontology_text_rag,4,Ontology-to-Text Vector RAG,1,0.8425925925925927,0.8425925925925927,0.0,1.0,1,1
+qwen2_5_7b,prompt_only,1,Prompt-Only Generation,1,0.7477653631284915,0.7477653631284915,0.0,1.0,1,1
+qwen2_5_7b,prompt_rag,2,Text-RAG Generation,1,0.8495024875621892,0.8495024875621892,0.0,1.0,1,1

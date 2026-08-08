@@ -1,0 +1,12 @@
+PREFIX psq: <http://personashield.ait.ac.th/ontology/psq-sco#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+ASK {
+  psq:Learner_HR_Beginner psq:hasPerformanceState psq:Performance_Stable ;
+                           psq:hasMoodContext psq:Mood_NotModeledNeutral .
+  psq:TPL_SMS_BankLink_Introductory rdf:type psq:ScenarioTemplate .
+  psq:TPL_SMS_Legitimate_Introductory rdf:type psq:ScenarioTemplate .
+}

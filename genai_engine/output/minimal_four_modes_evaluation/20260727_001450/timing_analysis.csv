@@ -1,0 +1,5 @@
+model_key,method,condition_number,condition_name,n,direct_timing_n,direct_generation_seconds_mean,direct_generation_seconds_median,observed_timing_n,observed_interarrival_seconds_mean,observed_interarrival_seconds_median,parse_retry_count_mean,live_llm_rate,fallback_rate
+qwen2_5_7b,ontology_prompt_rag,3,Ontology-Derived Structured Prompting RAG,1,0,,,0,,,0.0,0.0,1.0
+qwen2_5_7b,ontology_text_rag,4,Ontology-to-Text Vector RAG,1,0,,,0,,,0.0,0.0,1.0
+qwen2_5_7b,prompt_only,1,Prompt-Only Generation,1,0,,,0,,,0.0,0.0,1.0
+qwen2_5_7b,prompt_rag,2,Text-RAG Generation,1,0,,,0,,,0.0,0.0,1.0

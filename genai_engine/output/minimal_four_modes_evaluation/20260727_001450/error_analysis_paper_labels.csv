@@ -1,0 +1,10 @@
+error_type,prompt_only,prompt_rag,ontology_prompt_rag,ontology_text_rag,interpretation
+missing_evidence,1,0,0,0,Output lacks full evidence/provenance grounding.
+wrong_channel,0,0,0,0,Generated channel does not match requested channel.
+wrong_attack,0,0,0,0,Generated attack type does not match requested channel/variant expectation.
+unsafe_action,0,0,0,0,Generated response recommends unsafe or inappropriate defensive behavior.
+contradiction,0,0,0,0,Generated scenario contains a serious internal inconsistency.
+common_case_concept_not_perfect_recall,0,0,0,0,"Strict diagnostic using the method-invariant case oracle; interpret with common-case precision, recall, and F1."
+legacy_method_conditioned_concept_not_perfect_recall,1,1,1,1,Backward-compatible diagnostic only; its oracle can include method-specific packet concepts.
+schema_provenance_incomplete,1,0,0,0,"The row is parseable, but required executable fields or evidence/provenance fields are incomplete."
+invalid_json_or_missing_scenario,0,0,0,0,The row could not be parsed into an inspectable scenario object; reported means are average pass rates.

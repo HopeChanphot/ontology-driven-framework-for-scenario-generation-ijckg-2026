@@ -1,0 +1,10 @@
+error_type,prompt_only,prompt_rag,ontology_prompt_rag,ontology_text_rag
+missing_evidence,1,0,0,0
+schema_incomplete,1,0,0,0
+wrong_channel,0,0,0,0
+wrong_attack,0,0,0,0
+unsafe_action,0,0,0,0
+contradiction,0,0,0,0
+missing_required_concepts,1,1,1,1
+invalid_json_or_missing_scenario,0,0,0,0
+invalid_json_or_schema,1,0,0,0

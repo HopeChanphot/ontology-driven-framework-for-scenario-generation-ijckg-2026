@@ -1,0 +1,868 @@
+{
+  "notes": [
+    "Primary inference uses the method-invariant common-case concept F1.",
+    "The common oracle is project-specific; precision, recall, F1, Wilcoxon, Friedman, Holm, bootstrap, and rank-biserial formulas are standard.",
+    "Case-clustered analysis (n=120 cases) is primary because every case is repeated across three LLMs.",
+    "Legacy overall conformance is retained only for backward compatibility and sensitivity analysis."
+  ],
+  "primary_metric": "common_case_concept_f1",
+  "primary_model_case_analysis": {
+    "metric": "common_case_concept_f1",
+    "unit": "model_case",
+    "complete_block_n": 1,
+    "comparisons": [
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "model_case",
+        "left": "prompt_only",
+        "right": "prompt_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      },
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "model_case",
+        "left": "prompt_rag",
+        "right": "ontology_prompt_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      },
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "model_case",
+        "left": "ontology_prompt_rag",
+        "right": "ontology_text_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      },
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "model_case",
+        "left": "prompt_rag",
+        "right": "ontology_text_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      },
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "model_case",
+        "left": "prompt_only",
+        "right": "ontology_prompt_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      },
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "model_case",
+        "left": "prompt_only",
+        "right": "ontology_text_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      }
+    ],
+    "friedman": {
+      "status": "not_run_too_few_blocks"
+    }
+  },
+  "primary_case_clustered_analysis": {
+    "metric": "common_case_concept_f1",
+    "unit": "case_cluster",
+    "cluster_definition": "mean across available LLMs within each frozen case and method",
+    "complete_case_n": 1,
+    "comparisons": [
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "case_cluster",
+        "left": "prompt_only",
+        "right": "prompt_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      },
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "case_cluster",
+        "left": "prompt_rag",
+        "right": "ontology_prompt_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      },
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "case_cluster",
+        "left": "ontology_prompt_rag",
+        "right": "ontology_text_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      },
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "case_cluster",
+        "left": "prompt_rag",
+        "right": "ontology_text_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      },
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "case_cluster",
+        "left": "prompt_only",
+        "right": "ontology_prompt_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      },
+      {
+        "metric": "common_case_concept_f1",
+        "unit": "case_cluster",
+        "left": "prompt_only",
+        "right": "ontology_text_rag",
+        "paired_n": 1,
+        "nonzero_difference_n": 0,
+        "positive_difference_n": 0,
+        "negative_difference_n": 0,
+        "tie_n": 1,
+        "mean_left": 1.0,
+        "mean_right": 1.0,
+        "mean_difference_right_minus_left": 0.0,
+        "median_difference_right_minus_left": 0.0,
+        "bootstrap_ci95": [
+          0.0,
+          0.0
+        ],
+        "wilcoxon_signed_rank": {
+          "status": "not_run_too_few_pairs"
+        },
+        "matched_rank_biserial": null,
+        "sign_dominance": null
+      }
+    ],
+    "friedman": {
+      "status": "not_run_too_few_blocks"
+    }
+  },
+  "binary_pass_analysis": {
+    "metric": "contradiction_free_pass",
+    "unit": "model_case",
+    "complete_block_n": 1,
+    "comparisons": [
+      {
+        "left": "prompt_only",
+        "right": "prompt_rag",
+        "paired_n": 1,
+        "mcnemar": {
+          "status": "not_run_no_discordant_pairs",
+          "b": 0,
+          "c": 0
+        }
+      },
+      {
+        "left": "prompt_rag",
+        "right": "ontology_prompt_rag",
+        "paired_n": 1,
+        "mcnemar": {
+          "status": "not_run_no_discordant_pairs",
+          "b": 0,
+          "c": 0
+        }
+      },
+      {
+        "left": "ontology_prompt_rag",
+        "right": "ontology_text_rag",
+        "paired_n": 1,
+        "mcnemar": {
+          "status": "not_run_no_discordant_pairs",
+          "b": 0,
+          "c": 0
+        }
+      },
+      {
+        "left": "prompt_rag",
+        "right": "ontology_text_rag",
+        "paired_n": 1,
+        "mcnemar": {
+          "status": "not_run_no_discordant_pairs",
+          "b": 0,
+          "c": 0
+        }
+      },
+      {
+        "left": "prompt_only",
+        "right": "ontology_prompt_rag",
+        "paired_n": 1,
+        "mcnemar": {
+          "status": "not_run_no_discordant_pairs",
+          "b": 0,
+          "c": 0
+        }
+      },
+      {
+        "left": "prompt_only",
+        "right": "ontology_text_rag",
+        "paired_n": 1,
+        "mcnemar": {
+          "status": "not_run_no_discordant_pairs",
+          "b": 0,
+          "c": 0
+        }
+      }
+    ],
+    "cochran_q": {
+      "status": "not_run_too_few_blocks_or_methods",
+      "n_blocks": 1
+    }
+  },
+  "secondary_legacy_overall_conformance": {
+    "model_case_analysis": {
+      "metric": "overall_conformance",
+      "unit": "model_case",
+      "complete_block_n": 1,
+      "comparisons": [
+        {
+          "metric": "overall_conformance",
+          "unit": "model_case",
+          "left": "prompt_only",
+          "right": "prompt_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 1,
+          "negative_difference_n": 0,
+          "tie_n": 0,
+          "mean_left": 0.7477653631284915,
+          "mean_right": 0.8495024875621892,
+          "mean_difference_right_minus_left": 0.10173712443369765,
+          "median_difference_right_minus_left": 0.10173712443369765,
+          "bootstrap_ci95": [
+            0.10173712443369765,
+            0.10173712443369765
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": 1.0,
+          "sign_dominance": 1.0
+        },
+        {
+          "metric": "overall_conformance",
+          "unit": "model_case",
+          "left": "prompt_rag",
+          "right": "ontology_prompt_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 1,
+          "negative_difference_n": 0,
+          "tie_n": 0,
+          "mean_left": 0.8495024875621892,
+          "mean_right": 0.900804289544236,
+          "mean_difference_right_minus_left": 0.05130180198204681,
+          "median_difference_right_minus_left": 0.05130180198204681,
+          "bootstrap_ci95": [
+            0.05130180198204681,
+            0.05130180198204681
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": 1.0,
+          "sign_dominance": 1.0
+        },
+        {
+          "metric": "overall_conformance",
+          "unit": "model_case",
+          "left": "ontology_prompt_rag",
+          "right": "ontology_text_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 0,
+          "negative_difference_n": 1,
+          "tie_n": 0,
+          "mean_left": 0.900804289544236,
+          "mean_right": 0.8425925925925927,
+          "mean_difference_right_minus_left": -0.0582116969516433,
+          "median_difference_right_minus_left": -0.0582116969516433,
+          "bootstrap_ci95": [
+            -0.0582116969516433,
+            -0.0582116969516433
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": -1.0,
+          "sign_dominance": -1.0
+        },
+        {
+          "metric": "overall_conformance",
+          "unit": "model_case",
+          "left": "prompt_rag",
+          "right": "ontology_text_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 0,
+          "negative_difference_n": 1,
+          "tie_n": 0,
+          "mean_left": 0.8495024875621892,
+          "mean_right": 0.8425925925925927,
+          "mean_difference_right_minus_left": -0.006909894969596486,
+          "median_difference_right_minus_left": -0.006909894969596486,
+          "bootstrap_ci95": [
+            -0.006909894969596486,
+            -0.006909894969596486
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": -1.0,
+          "sign_dominance": -1.0
+        },
+        {
+          "metric": "overall_conformance",
+          "unit": "model_case",
+          "left": "prompt_only",
+          "right": "ontology_prompt_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 1,
+          "negative_difference_n": 0,
+          "tie_n": 0,
+          "mean_left": 0.7477653631284915,
+          "mean_right": 0.900804289544236,
+          "mean_difference_right_minus_left": 0.15303892641574446,
+          "median_difference_right_minus_left": 0.15303892641574446,
+          "bootstrap_ci95": [
+            0.15303892641574446,
+            0.15303892641574446
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": 1.0,
+          "sign_dominance": 1.0
+        },
+        {
+          "metric": "overall_conformance",
+          "unit": "model_case",
+          "left": "prompt_only",
+          "right": "ontology_text_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 1,
+          "negative_difference_n": 0,
+          "tie_n": 0,
+          "mean_left": 0.7477653631284915,
+          "mean_right": 0.8425925925925927,
+          "mean_difference_right_minus_left": 0.09482722946410116,
+          "median_difference_right_minus_left": 0.09482722946410116,
+          "bootstrap_ci95": [
+            0.09482722946410116,
+            0.09482722946410116
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": 1.0,
+          "sign_dominance": 1.0
+        }
+      ],
+      "friedman": {
+        "status": "not_run_too_few_blocks"
+      }
+    },
+    "case_clustered_analysis": {
+      "metric": "overall_conformance",
+      "unit": "case_cluster",
+      "cluster_definition": "mean across available LLMs within each frozen case and method",
+      "complete_case_n": 1,
+      "comparisons": [
+        {
+          "metric": "overall_conformance",
+          "unit": "case_cluster",
+          "left": "prompt_only",
+          "right": "prompt_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 1,
+          "negative_difference_n": 0,
+          "tie_n": 0,
+          "mean_left": 0.7477653631284915,
+          "mean_right": 0.8495024875621892,
+          "mean_difference_right_minus_left": 0.10173712443369765,
+          "median_difference_right_minus_left": 0.10173712443369765,
+          "bootstrap_ci95": [
+            0.10173712443369765,
+            0.10173712443369765
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": 1.0,
+          "sign_dominance": 1.0
+        },
+        {
+          "metric": "overall_conformance",
+          "unit": "case_cluster",
+          "left": "prompt_rag",
+          "right": "ontology_prompt_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 1,
+          "negative_difference_n": 0,
+          "tie_n": 0,
+          "mean_left": 0.8495024875621892,
+          "mean_right": 0.900804289544236,
+          "mean_difference_right_minus_left": 0.05130180198204681,
+          "median_difference_right_minus_left": 0.05130180198204681,
+          "bootstrap_ci95": [
+            0.05130180198204681,
+            0.05130180198204681
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": 1.0,
+          "sign_dominance": 1.0
+        },
+        {
+          "metric": "overall_conformance",
+          "unit": "case_cluster",
+          "left": "ontology_prompt_rag",
+          "right": "ontology_text_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 0,
+          "negative_difference_n": 1,
+          "tie_n": 0,
+          "mean_left": 0.900804289544236,
+          "mean_right": 0.8425925925925927,
+          "mean_difference_right_minus_left": -0.0582116969516433,
+          "median_difference_right_minus_left": -0.0582116969516433,
+          "bootstrap_ci95": [
+            -0.0582116969516433,
+            -0.0582116969516433
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": -1.0,
+          "sign_dominance": -1.0
+        },
+        {
+          "metric": "overall_conformance",
+          "unit": "case_cluster",
+          "left": "prompt_rag",
+          "right": "ontology_text_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 0,
+          "negative_difference_n": 1,
+          "tie_n": 0,
+          "mean_left": 0.8495024875621892,
+          "mean_right": 0.8425925925925927,
+          "mean_difference_right_minus_left": -0.006909894969596486,
+          "median_difference_right_minus_left": -0.006909894969596486,
+          "bootstrap_ci95": [
+            -0.006909894969596486,
+            -0.006909894969596486
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": -1.0,
+          "sign_dominance": -1.0
+        },
+        {
+          "metric": "overall_conformance",
+          "unit": "case_cluster",
+          "left": "prompt_only",
+          "right": "ontology_prompt_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 1,
+          "negative_difference_n": 0,
+          "tie_n": 0,
+          "mean_left": 0.7477653631284915,
+          "mean_right": 0.900804289544236,
+          "mean_difference_right_minus_left": 0.15303892641574446,
+          "median_difference_right_minus_left": 0.15303892641574446,
+          "bootstrap_ci95": [
+            0.15303892641574446,
+            0.15303892641574446
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": 1.0,
+          "sign_dominance": 1.0
+        },
+        {
+          "metric": "overall_conformance",
+          "unit": "case_cluster",
+          "left": "prompt_only",
+          "right": "ontology_text_rag",
+          "paired_n": 1,
+          "nonzero_difference_n": 1,
+          "positive_difference_n": 1,
+          "negative_difference_n": 0,
+          "tie_n": 0,
+          "mean_left": 0.7477653631284915,
+          "mean_right": 0.8425925925925927,
+          "mean_difference_right_minus_left": 0.09482722946410116,
+          "median_difference_right_minus_left": 0.09482722946410116,
+          "bootstrap_ci95": [
+            0.09482722946410116,
+            0.09482722946410116
+          ],
+          "wilcoxon_signed_rank": {
+            "status": "not_run_too_few_pairs"
+          },
+          "matched_rank_biserial": 1.0,
+          "sign_dominance": 1.0
+        }
+      ],
+      "friedman": {
+        "status": "not_run_too_few_blocks"
+      }
+    }
+  },
+  "all_method_friedman_primary_model_case": {
+    "status": "not_run_too_few_blocks"
+  },
+  "all_method_friedman_primary_case_clustered": {
+    "status": "not_run_too_few_blocks"
+  },
+  "all_method_friedman_legacy_model_case": {
+    "status": "not_run_too_few_blocks"
+  },
+  "all_method_friedman_legacy_case_clustered": {
+    "status": "not_run_too_few_blocks"
+  },
+  "comparisons": [
+    {
+      "metric": "overall_conformance",
+      "unit": "model_case",
+      "left": "prompt_only",
+      "right": "prompt_rag",
+      "paired_n": 1,
+      "nonzero_difference_n": 1,
+      "positive_difference_n": 1,
+      "negative_difference_n": 0,
+      "tie_n": 0,
+      "mean_left": 0.7477653631284915,
+      "mean_right": 0.8495024875621892,
+      "mean_difference_right_minus_left": 0.10173712443369765,
+      "median_difference_right_minus_left": 0.10173712443369765,
+      "bootstrap_ci95": [
+        0.10173712443369765,
+        0.10173712443369765
+      ],
+      "wilcoxon_signed_rank": {
+        "status": "not_run_too_few_pairs"
+      },
+      "matched_rank_biserial": 1.0,
+      "sign_dominance": 1.0
+    },
+    {
+      "metric": "overall_conformance",
+      "unit": "model_case",
+      "left": "prompt_rag",
+      "right": "ontology_prompt_rag",
+      "paired_n": 1,
+      "nonzero_difference_n": 1,
+      "positive_difference_n": 1,
+      "negative_difference_n": 0,
+      "tie_n": 0,
+      "mean_left": 0.8495024875621892,
+      "mean_right": 0.900804289544236,
+      "mean_difference_right_minus_left": 0.05130180198204681,
+      "median_difference_right_minus_left": 0.05130180198204681,
+      "bootstrap_ci95": [
+        0.05130180198204681,
+        0.05130180198204681
+      ],
+      "wilcoxon_signed_rank": {
+        "status": "not_run_too_few_pairs"
+      },
+      "matched_rank_biserial": 1.0,
+      "sign_dominance": 1.0
+    },
+    {
+      "metric": "overall_conformance",
+      "unit": "model_case",
+      "left": "ontology_prompt_rag",
+      "right": "ontology_text_rag",
+      "paired_n": 1,
+      "nonzero_difference_n": 1,
+      "positive_difference_n": 0,
+      "negative_difference_n": 1,
+      "tie_n": 0,
+      "mean_left": 0.900804289544236,
+      "mean_right": 0.8425925925925927,
+      "mean_difference_right_minus_left": -0.0582116969516433,
+      "median_difference_right_minus_left": -0.0582116969516433,
+      "bootstrap_ci95": [
+        -0.0582116969516433,
+        -0.0582116969516433
+      ],
+      "wilcoxon_signed_rank": {
+        "status": "not_run_too_few_pairs"
+      },
+      "matched_rank_biserial": -1.0,
+      "sign_dominance": -1.0
+    },
+    {
+      "metric": "overall_conformance",
+      "unit": "model_case",
+      "left": "prompt_rag",
+      "right": "ontology_text_rag",
+      "paired_n": 1,
+      "nonzero_difference_n": 1,
+      "positive_difference_n": 0,
+      "negative_difference_n": 1,
+      "tie_n": 0,
+      "mean_left": 0.8495024875621892,
+      "mean_right": 0.8425925925925927,
+      "mean_difference_right_minus_left": -0.006909894969596486,
+      "median_difference_right_minus_left": -0.006909894969596486,
+      "bootstrap_ci95": [
+        -0.006909894969596486,
+        -0.006909894969596486
+      ],
+      "wilcoxon_signed_rank": {
+        "status": "not_run_too_few_pairs"
+      },
+      "matched_rank_biserial": -1.0,
+      "sign_dominance": -1.0
+    },
+    {
+      "metric": "overall_conformance",
+      "unit": "model_case",
+      "left": "prompt_only",
+      "right": "ontology_prompt_rag",
+      "paired_n": 1,
+      "nonzero_difference_n": 1,
+      "positive_difference_n": 1,
+      "negative_difference_n": 0,
+      "tie_n": 0,
+      "mean_left": 0.7477653631284915,
+      "mean_right": 0.900804289544236,
+      "mean_difference_right_minus_left": 0.15303892641574446,
+      "median_difference_right_minus_left": 0.15303892641574446,
+      "bootstrap_ci95": [
+        0.15303892641574446,
+        0.15303892641574446
+      ],
+      "wilcoxon_signed_rank": {
+        "status": "not_run_too_few_pairs"
+      },
+      "matched_rank_biserial": 1.0,
+      "sign_dominance": 1.0
+    },
+    {
+      "metric": "overall_conformance",
+      "unit": "model_case",
+      "left": "prompt_only",
+      "right": "ontology_text_rag",
+      "paired_n": 1,
+      "nonzero_difference_n": 1,
+      "positive_difference_n": 1,
+      "negative_difference_n": 0,
+      "tie_n": 0,
+      "mean_left": 0.7477653631284915,
+      "mean_right": 0.8425925925925927,
+      "mean_difference_right_minus_left": 0.09482722946410116,
+      "median_difference_right_minus_left": 0.09482722946410116,
+      "bootstrap_ci95": [
+        0.09482722946410116,
+        0.09482722946410116
+      ],
+      "wilcoxon_signed_rank": {
+        "status": "not_run_too_few_pairs"
+      },
+      "matched_rank_biserial": 1.0,
+      "sign_dominance": 1.0
+    }
+  ],
+  "all_method_friedman": {
+    "status": "not_run_too_few_blocks",
+    "metric": "overall_conformance",
+    "deprecated_alias": true,
+    "replacement": "all_method_friedman_primary_model_case or all_method_friedman_legacy_model_case"
+  },
+  "all_method_cochran_q": {
+    "status": "not_run_too_few_blocks_or_methods",
+    "n_blocks": 1
+  }
+}

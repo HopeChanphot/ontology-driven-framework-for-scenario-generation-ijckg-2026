@@ -1,0 +1,134 @@
+individual,label,classes
+Action_ContinueApprovedWorkflow,Continue through the approved workflow after verification,SafeResponseAction
+Action_DoNotClickOrReply,Do not click or reply; verify independently,SafeResponseAction
+Action_EndCallAndVerify,End the call and verify independently,SafeResponseAction
+Action_PauseAndVerify,Pause and verify independently,SafeResponseAction
+Age_15_21,Ages 15-21,Age15To21Group
+Age_22_35,Ages 22-35,Age22To35Group
+Age_36_45,Ages 36-45,Age36To45Group
+Age_46_59,Ages 46-59,Age46To59Group
+Age_60_90,Ages 60-90,Age60To90Group
+BEGINNER_ADVANCED,Beginner Advanced,LearningStage
+BEGINNER_DEVELOPING,Beginner Developing,LearningStage
+BEGINNER_INTRODUCTORY,Beginner Introductory,LearningStage
+CAPEC_164,Mobile Phishing,CAPECPattern
+CAPEC_98,Phishing,CAPECPattern
+Cue_Authority,Authority,PersuasionCue
+Cue_Curiosity,Curiosity,PersuasionCue
+Cue_Fear,Fear,PersuasionCue
+Cue_Reciprocity,Reciprocity,PersuasionCue
+Cue_Scarcity,Scarcity,PersuasionCue
+Cue_SocialProof,Social proof,PersuasionCue
+Cue_Urgency,Urgency,PersuasionCue
+DS_AFNC,Thailand Anti-Fake News Center open data,Dataset
+DS_CAPEC_XML,CAPEC XML snapshot,Dataset
+DS_IRSCallTranscript,IRS phone-scam transcript,Dataset
+DS_KnowledgeBaseJSONL,PersonaShield normalized JSONL knowledge base,Dataset
+DS_MITRE_STIX_18_1,MITRE ATT&CK Enterprise STIX 18.1,Dataset
+DS_ThaiFraudSMS,Thai fraud SMS collection,Dataset
+Decision_Accept,Accept generated scenario,ValidationDecision
+Decision_Reject,Reject generated scenario,ValidationDecision
+Decision_Review,Review generated scenario,ValidationDecision
+Difficulty_Advanced,Advanced difficulty,AdvancedDifficultyBand
+Difficulty_Developing,Developing difficulty,DevelopingDifficultyBand
+Difficulty_Introductory,Introductory difficulty,IntroductoryDifficultyBand
+ENGLISH_GLOBAL,ENGLISH_GLOBAL,RetrievalMode
+EXPERT_ADVANCED,Expert Advanced,LearningStage
+EXPERT_DEVELOPING,Expert Developing,LearningStage
+EXPERT_INTRODUCTORY,Expert Introductory,LearningStage
+Email,Email,EmailChannel
+Error_ChannelMismatch,Channel mismatch,ErrorType
+Evidence_Email_InvoiceChange_Developing,Evidence for developing email invoice-change scenario,EvidencePack
+Evidence_Email_Legitimate_Developing,Evidence for developing legitimate email scenario,EvidencePack
+Evidence_SMS_BankLink_Introductory,Evidence for introductory SMS bank-link scenario,EvidencePack
+Evidence_SMS_Legitimate_Introductory,Evidence for introductory legitimate SMS scenario,EvidencePack
+Evidence_Voice_ITSupport_Advanced,Evidence for advanced voice IT-support scenario,EvidencePack
+Evidence_Voice_Legitimate_Advanced,Evidence for advanced legitimate voice scenario,EvidencePack
+FakeVariant,Fake scenario,MaliciousScenarioVariant
+Generated_SMS_BankLink_Candidate_v9,Generated SMS bank-link candidate v9,GeneratedScenario
+HYBRID_COMPARE,HYBRID_COMPARE,RetrievalMode
+INTERMEDIATE_ADVANCED,Intermediate Advanced,LearningStage
+INTERMEDIATE_DEVELOPING,Intermediate Developing,LearningStage
+INTERMEDIATE_INTRODUCTORY,Intermediate Introductory,LearningStage
+Learner_HR_Beginner,Representative beginner HR learner,LearnerProfile
+LegalConsequence_ReportToITOrSecurity,Report to IT or security,LegalConsequence
+LegitimateCommunication,Legitimate communication,NonAttackCommunicationType
+Macro_Beginner,Beginner macro stage,MacroStage
+Macro_Expert,Expert macro stage,MacroStage
+Macro_Intermediate,Intermediate macro stage,MacroStage
+Micro_Advanced,Advanced micro stage,MicroStage
+Micro_Developing,Developing micro stage,MicroStage
+Micro_Introductory,Introductory micro stage,MicroStage
+Mood_NotModeledNeutral,Mood context not modeled - neutral placeholder,MoodContext
+PROV_TPL_Email_InvoiceChange_Developing,Provenance for developing email invoice-change scenario,ProvenanceRecord
+PROV_TPL_Email_Legitimate_Developing,Provenance for developing legitimate email scenario,ProvenanceRecord
+PROV_TPL_SMS_BankLink_Introductory,Provenance for introductory SMS bank-link scenario,ProvenanceRecord
+PROV_TPL_SMS_Legitimate_Introductory,Provenance for introductory legitimate SMS scenario,ProvenanceRecord
+PROV_TPL_Voice_ITSupport_Advanced,Provenance for advanced voice IT-support scenario,ProvenanceRecord
+PROV_TPL_Voice_Legitimate_Advanced,Provenance for advanced legitimate voice scenario,ProvenanceRecord
+Performance_Stable,Stable performance,PerformanceState
+Phishing,Phishing,MessageBasedAttackType
+RF_CredentialRequest,Credential request,RedFlag
+RF_OTPRequest,One-time-password request,RedFlag
+RF_RemoteAccessRequest,Remote-access request,RedFlag
+RF_SenderMismatch,Sender or domain mismatch,RedFlag
+RF_SuspiciousLink,Suspicious link,RedFlag
+RF_UnexpectedAttachment,Unexpected attachment,RedFlag
+RF_UnusualPayment,Unusual payment request,RedFlag
+RF_UnverifiedCaller,Unverified caller,RedFlag
+RF_UrgencyPressure,Urgency or time pressure,RedFlag
+RF_WorkflowBypass,Request to bypass normal workflow,RedFlag
+RealVariant,Real scenario,LegitimateScenarioVariant
+Role_FINANCE,FINANCE,BusinessPersonaRole
+Role_HR,HR,BusinessPersonaRole
+Role_IT,IT,TechnicalPersonaRole
+Role_MANAGEMENT,MANAGEMENT,BusinessPersonaRole
+Role_OTHER,OTHER,GeneralPersonaRole
+Rule_ChannelConsistency,Rule ChannelConsistency,ConsistencyConstraint
+Rule_EvidenceRequirement,Rule EvidenceRequirement,EvidenceCoverageConstraint
+Rule_LegitimateScenarioSeparation,Rule LegitimateScenarioSeparation,ConsistencyConstraint
+Rule_PersonaFit,Rule PersonaFit,PersonaFitConstraint
+Rule_QualityAcceptance,Rule QualityAcceptance,ContentQualityRule
+Rule_QualityRejection,Rule QualityRejection,SafetyConstraint
+Rule_RequiredAttackStructure,Rule RequiredAttackStructure,RequiredConceptCoverageRule
+Rule_TemplateEligibility,Rule TemplateEligibility,ContentQualityRule
+SI_ExpectedWorkflow,Expected workflow,SafeIndicator
+SI_IndependentVerification,Independent verification is available,SafeIndicator
+SI_KnownSender,Known sender,SafeIndicator
+SMSChat,SMS or chat,SMSChatChannel
+Score_SMS_BankLink_Candidate,SMS bank-link candidate score,ScenarioQualityScore
+SemanticPacket_SMS_BankLink_v9,SMS bank-link semantic packet v9,SemanticPacket
+Smishing,Smishing,MessageBasedAttackType
+Source_CAPEC_164,MITRE CAPEC-164 Mobile Phishing,SourceArtifact
+Source_HAISQ2014,Determining employee awareness using HAIS-Q,TheorySource
+Source_KnowledgeGraphs2021,Knowledge Graphs,SourceArtifact
+Source_MITRE_T1566,MITRE ATT&CK T1566 Phishing,SourceArtifact
+Source_MITRE_T1566_004,MITRE ATT&CK T1566.004 Spearphishing Voice,SourceArtifact
+Source_Ontology101,Ontology Development 101,SourceArtifact
+Source_PROVO,PROV-O: The PROV Ontology,SourceArtifact
+Source_PhishingGameFramework2013,A game design framework for avoiding phishing attacks,TheorySource
+Source_PhishingMindfulness2017,Training to mitigate phishing attacks using mindfulness techniques,TheorySource
+Source_PhishingVulnerability2011,Why do people get phished?,TheorySource
+Source_RAG2020,Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks,SourceArtifact
+Source_SeriousGamesMeta2013,A meta-analysis of the cognitive and motivational effects of serious games,TheorySource
+State_HR_BeginnerIntroductory,HR learner at beginner introductory stage,LearnerStateSnapshot
+T1566,Phishing,ATTACKTechnique
+T1566_001,Spearphishing Attachment,ATTACKTechnique
+T1566_002,Spearphishing Link,ATTACKTechnique
+T1566_003,Spearphishing via Service,ATTACKTechnique
+T1566_004,Spearphishing Voice,ATTACKTechnique
+TA_CredentialHarvesting,Credential harvesting,ThreatAction
+TA_PaymentDiversion,Payment diversion,ThreatAction
+TA_RemoteAccess,Remote-access request,ThreatAction
+TA_WorkflowBypass,Workflow bypass,ThreatAction
+THAI_LOCAL,THAI_LOCAL,RetrievalMode
+TPL_Email_InvoiceChange_Developing,Vendor bank detail change,ScenarioTemplate
+TPL_Email_Legitimate_Developing,Expected approval-workflow notification,ScenarioTemplate
+TPL_SMS_BankLink_Introductory,Urgent bank verification link,ScenarioTemplate
+TPL_SMS_Legitimate_Introductory,Expected internal reminder,ScenarioTemplate
+TPL_Voice_ITSupport_Advanced,False IT support remote-access call,ScenarioTemplate
+TPL_Voice_Legitimate_Advanced,Verified high-priority service call,ScenarioTemplate
+Transition_BeginnerIntro_to_BeginnerDeveloping_SMS,Advance to beginner developing with paired SMS scenarios,TransitionConstraintProfile
+Violation_ChannelMismatch,Channel mismatch violation,ConstraintViolation
+Vishing,Vishing,VoiceBasedAttackType
+VoiceCall,Voice call,VoiceCallChannel

@@ -1,0 +1,95 @@
+{
+  "version": "9.1.0",
+  "generated_at": "2026-07-01T00:14:48",
+  "ontology": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\ontology\\personashield-psq-sco-v9.1.owl",
+  "bounded_completeness_claim": "complete_for_CQ1_CQ2_CQ3_CQ4_only",
+  "status": "PASS",
+  "required_checks": 4362,
+  "passed_checks": 4362,
+  "completeness_ratio": 1.0,
+  "template_completeness": {
+    "template_count": 6,
+    "coverage_by_cq": {
+      "CQ1": {
+        "passed": 72,
+        "total": 72,
+        "coverage": 1.0
+      },
+      "CQ2": {
+        "passed": 30,
+        "total": 30,
+        "coverage": 1.0
+      },
+      "CQ3": {
+        "passed": 6,
+        "total": 6,
+        "coverage": 1.0
+      },
+      "CQ4": {
+        "passed": 12,
+        "total": 12,
+        "coverage": 1.0
+      }
+    },
+    "variant_counts": {
+      "FakeVariant": 3,
+      "RealVariant": 3
+    },
+    "channel_counts": {
+      "Email": 2,
+      "SMSChat": 2,
+      "VoiceCall": 2
+    },
+    "difficulty_counts": {
+      "Difficulty_Advanced": 2,
+      "Difficulty_Developing": 2,
+      "Difficulty_Introductory": 2
+    }
+  },
+  "quality_control": {
+    "required_rule_count": 8,
+    "generated_scenario_count": 1
+  },
+  "evidence_grounding": {
+    "evidence_pack_count": 6,
+    "source_count": 6,
+    "dataset_count": 2,
+    "provenance_record_count": 6
+  },
+  "noise_analysis": {
+    "dangling_local_reference_count": 0,
+    "graph_export_status": "checked",
+    "graph_export_node_count": 311,
+    "graph_export_edge_count": 3164
+  },
+  "removed_scope_analysis": {
+    "forbidden_term_count": 25,
+    "literal_hit_count": 0,
+    "graph_export_hit_count": 0,
+    "status": "PASS",
+    "literal_hits": [],
+    "graph_export_hits": []
+  },
+  "owl_restriction_analysis": {
+    "status": "PASS",
+    "malformed_restriction_count": 0,
+    "malformed_restrictions": []
+  },
+  "graph_export": {
+    "graph_json": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\knowledge_graph\\v9_1\\personashield-psq-sco-v9.1-graph.json",
+    "nodes": 311,
+    "edges": 3164
+  },
+  "reasoner": {
+    "status": "PASS",
+    "consistent": true,
+    "unsatisfiable_count": 0,
+    "ontology": "C:\\Users\\user\\PersonaShieldQuest-Ontology\\ontology\\personashield-psq-sco-v9.1.owl",
+    "reasoner": "HermiT"
+  },
+  "error_analysis": {
+    "severity_counts": {},
+    "category_counts": {},
+    "issues": []
+  }
+}

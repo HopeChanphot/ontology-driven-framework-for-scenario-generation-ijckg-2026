@@ -1,0 +1,40 @@
+{
+  "run_id": "20260726_235309",
+  "updated_at": "2026-07-26T23:53:09.965642",
+  "engine": "psq_sco_generation",
+  "case_set": "single",
+  "llm": "qwen2_5_7b",
+  "mode": "all_modes",
+  "selected_modes": [
+    "prompt_only",
+    "prompt_rag",
+    "ontology_prompt_rag",
+    "ontology_text_rag"
+  ],
+  "selected_case_ids": [],
+  "completed_results": 4,
+  "attempted_or_recorded_results": 4,
+  "total_expected_results": 4,
+  "remaining_results": 0,
+  "resume_dir": null,
+  "require_live_llm": false,
+  "n_rag_examples": 2,
+  "ontology_text_doc_limit": 5,
+  "llm_timeout": null,
+  "llm_max_tokens": null,
+  "llm_num_ctx": null,
+  "llm_temperature": null,
+  "llm_parse_retries": 1,
+  "compact_generation_prompt": false,
+  "latest_case_id": "SINGLE-001",
+  "latest_mode": "ontology_text_rag",
+  "latest_validation_passed": true,
+  "latest_error": null,
+  "output_files": {
+    "scenarios_jsonl": "D:\\Japan_InternProject\\PSQ_SCO_Internship_Handover_2026-07-26\\genai_engine\\output\\minimal_four_modes\\20260726_235309\\scenarios.jsonl",
+    "scenarios_prompt_only_jsonl": "D:\\Japan_InternProject\\PSQ_SCO_Internship_Handover_2026-07-26\\genai_engine\\output\\minimal_four_modes\\20260726_235309\\scenarios_prompt_only.jsonl",
+    "scenarios_prompt_rag_jsonl": "D:\\Japan_InternProject\\PSQ_SCO_Internship_Handover_2026-07-26\\genai_engine\\output\\minimal_four_modes\\20260726_235309\\scenarios_prompt_rag.jsonl",
+    "scenarios_ontology_prompt_rag_jsonl": "D:\\Japan_InternProject\\PSQ_SCO_Internship_Handover_2026-07-26\\genai_engine\\output\\minimal_four_modes\\20260726_235309\\scenarios_ontology_prompt_rag.jsonl",
+    "scenarios_ontology_text_rag_jsonl": "D:\\Japan_InternProject\\PSQ_SCO_Internship_Handover_2026-07-26\\genai_engine\\output\\minimal_four_modes\\20260726_235309\\scenarios_ontology_text_rag.jsonl"
+  }
+}

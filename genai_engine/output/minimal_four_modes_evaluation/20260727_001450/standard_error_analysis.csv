@@ -1,0 +1,10 @@
+error_type,prompt_only,prompt_rag,ontology_prompt_rag,ontology_text_rag,interpretation
+schema_safe_repair_used,0,0,0,0,"A successful live call was followed by replacement with the deterministic schema-safe scenario object; this is an attribution/integrity flag, not necessarily a content defect."
+generation_engine_validation_failed,0,0,0,0,At least one generation-engine quality rule fired; inspect engine_validation_issues separately from the independent technical decision.
+invalid_json_or_missing_scenario,0,0,0,0,Binary parse/scenario-object failure.
+any_requested_control_failure,0,0,0,0,At least one of the eight frozen case controls failed exact matching.
+game_schema_incomplete,0,0,0,0,At least one disclosed game-executable field is missing.
+common_case_concept_not_perfect_recall,0,0,0,0,At least one label in the method-invariant case oracle was not recovered.
+contradiction,0,0,0,0,At least one disclosed contradiction/safety rule fired.
+trace_incomplete_secondary,1,0,0,0,Project mechanism audit only; prompt-only has no retrieval trace by design.
+not_automatically_accepted,0,0,0,0,"The technical_gate_v1 decision is Minor Revision, Major Revision, or Reject/Regenerate; human approval is still required for every row."

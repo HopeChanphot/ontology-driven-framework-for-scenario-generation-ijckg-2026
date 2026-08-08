@@ -1,0 +1,174 @@
+{
+  "source_manuscript": "C:\\Users\\user\\.codex\\attachments\\19cedd7e-d4c8-41d6-8ecd-bc4cecbc3f7f\\pasted-text.txt",
+  "source_sha256": "4ca6b2fbfacf08d3b9f63baa8efabba8d6cf521177635048c18e35569ded9987",
+  "revised_main_sha256": "2d142075421e9d40d8fd9612c55583d31c7001c2cabf27e86b2f181db827bb68",
+  "evaluation_dir": "D:\\PersonaShieldQuest-GenAI-Engine\\output\\targeted_psq_sco_evaluation_repair\\20260723_200851\\evaluation_rerun",
+  "protected_blocks_all_byte_identical": true,
+  "protected_block_comparison": {
+    "title": {
+      "before_sha256": "0a18a738b6ecb1fd9cab49fca0c692f49e8f1fe426a858d455f57e81cd8d3982",
+      "after_sha256": "0a18a738b6ecb1fd9cab49fca0c692f49e8f1fe426a858d455f57e81cd8d3982",
+      "byte_identical": true,
+      "byte_length": 91
+    },
+    "running_title": {
+      "before_sha256": "ecd095f8bb20f038fc4f0e1a9c674911e1320490058de1882b120445edbdce63",
+      "after_sha256": "ecd095f8bb20f038fc4f0e1a9c674911e1320490058de1882b120445edbdce63",
+      "byte_identical": true,
+      "byte_length": 75
+    },
+    "author_metadata": {
+      "before_sha256": "adfc9d8cee95b016b40f923a2f3386ab19639d7f33822ff022b0c1765a024283",
+      "after_sha256": "adfc9d8cee95b016b40f923a2f3386ab19639d7f33822ff022b0c1765a024283",
+      "byte_identical": true,
+      "byte_length": 654
+    },
+    "abstract_environment": {
+      "before_sha256": "509318e9d593b7dacee8903470d7141140307c1bd39a7f52c110e5ef19ab5cb9",
+      "after_sha256": "509318e9d593b7dacee8903470d7141140307c1bd39a7f52c110e5ef19ab5cb9",
+      "byte_identical": true,
+      "byte_length": 2022
+    },
+    "keywords": {
+      "before_sha256": "e85c977da55a9f1b25f7e56b0afbce27a1a7d25876fe1bcede2e73ed41d01221",
+      "after_sha256": "e85c977da55a9f1b25f7e56b0afbce27a1a7d25876fe1bcede2e73ed41d01221",
+      "byte_identical": true,
+      "byte_length": 135
+    },
+    "introduction": {
+      "before_sha256": "6f8fc19233c69b2b4001d1efbd1f67d4dec081a02f88caacc5e21e875ec90f2f",
+      "after_sha256": "6f8fc19233c69b2b4001d1efbd1f67d4dec081a02f88caacc5e21e875ec90f2f",
+      "byte_identical": true,
+      "byte_length": 2301
+    },
+    "four_generation_modes": {
+      "before_sha256": "46d1ac54323878e117fd1af6b654e22138818aebb436488bcb7619fcc3877e04",
+      "after_sha256": "46d1ac54323878e117fd1af6b654e22138818aebb436488bcb7619fcc3877e04",
+      "byte_identical": true,
+      "byte_length": 5920
+    },
+    "layer_1_results": {
+      "before_sha256": "828cda37d9daf2234e6d211cfbf27368f62e9e86fd4a7c6a222bce3451489f82",
+      "after_sha256": "828cda37d9daf2234e6d211cfbf27368f62e9e86fd4a7c6a222bce3451489f82",
+      "byte_identical": true,
+      "byte_length": 1546
+    },
+    "layer_2_results": {
+      "before_sha256": "da3df597fecade07de6db2d1bf7e0b398c0d18fb757ed858b8837ae9897e903d",
+      "after_sha256": "da3df597fecade07de6db2d1bf7e0b398c0d18fb757ed858b8837ae9897e903d",
+      "byte_identical": true,
+      "byte_length": 1115
+    },
+    "diversity_definition": {
+      "before_sha256": "4edc6b930992c734dc4824a43dd41a6e4a7d092fabb8f028a4ce9a4c6364629f",
+      "after_sha256": "4edc6b930992c734dc4824a43dd41a6e4a7d092fabb8f028a4ce9a4c6364629f",
+      "byte_identical": true,
+      "byte_length": 999
+    },
+    "diversity_results": {
+      "before_sha256": "ce22033b90257724a38f4a9914b38e610ef695b34af9a8f192ddeb6652770f1f",
+      "after_sha256": "ce22033b90257724a38f4a9914b38e610ef695b34af9a8f192ddeb6652770f1f",
+      "byte_identical": true,
+      "byte_length": 1370
+    }
+  },
+  "changes": [
+    "Figure 1 width constrained from 1.10\\textwidth to \\textwidth.",
+    "Separated provenance-field completeness G from canonical traceability T.",
+    "Replaced the principal unequal OCI with equal-weight secondary OCI_eq.",
+    "Clarified the secondary status of OCI_eq in statistical analysis.",
+    "Regenerated method/model tables and inserted five matched cases.",
+    "Made Discussion component-first and bounded the OCI_eq claim.",
+    "Added traceability and composite-index threats to validity.",
+    "Distinguished resolvable paths from evidence support in Limitations.",
+    "Updated only OCI/traceability-dependent conclusion sentences."
+  ],
+  "citation_check": {
+    "cited_keys": [
+      "ain2026ijckg",
+      "arachchilage2013",
+      "becker2017weights",
+      "chromaDefault",
+      "clark2016",
+      "cochran1950",
+      "edge2024",
+      "es2024ragas",
+      "galanis2014",
+      "greco2019composite",
+      "hashem2023",
+      "hermit",
+      "hogan2021",
+      "keet2016",
+      "lai2026abel",
+      "lewis2020",
+      "mitreTaxonomies",
+      "owl2",
+      "pan2024",
+      "pardo2014",
+      "provo",
+      "reimers2019",
+      "shacl",
+      "sparql",
+      "tevet2021",
+      "wu2023retrieve"
+    ],
+    "bibliography_keys": [
+      "ain2026ijckg",
+      "arachchilage2013",
+      "becker2017weights",
+      "chromaDefault",
+      "clark2016",
+      "cochran1950",
+      "edge2024",
+      "es2024ragas",
+      "galanis2014",
+      "greco2019composite",
+      "hashem2023",
+      "hermit",
+      "hogan2021",
+      "keet2016",
+      "lai2026abel",
+      "lewis2020",
+      "mitreTaxonomies",
+      "owl2",
+      "pan2024",
+      "pardo2014",
+      "provo",
+      "reimers2019",
+      "shacl",
+      "sparql",
+      "tevet2021",
+      "wu2023retrieve"
+    ],
+    "missing_citations": [],
+    "missing_references": []
+  },
+  "forbidden_string_check": {
+    "tokens": [
+      "OCI=",
+      ".20J",
+      ".25A",
+      ".25F",
+      "No contr.",
+      "F1_EQ",
+      "REQ"
+    ],
+    "matches": {},
+    "passed": true
+  },
+  "figure_width_check": {
+    "contains_1_10_textwidth": false,
+    "contains_textwidth": true
+  },
+  "file_sha256": {
+    "llncs.cls": "a3cfe775b394aba8db8fbb54b8920ecbb12f4532cf787cd6d9b04712f58d0d1a",
+    "main.tex": "2d142075421e9d40d8fd9612c55583d31c7001c2cabf27e86b2f181db827bb68",
+    "main_original.tex": "4ca6b2fbfacf08d3b9f63baa8efabba8d6cf521177635048c18e35569ded9987",
+    "protected_blocks_snapshot.json": "d8c112c5eb49f677812cac10db9f9d4203661972bfb79305bf92035972acf303",
+    "PSQ_SCO_Compact_Framework_Fig1_Updated.png": "906e1ae9cd09a639ce09473270ad0eb60ef652ee5f038b5ce7b4d52128ce2ac4",
+    "references.bib": "3565105c1e90a16749665eedd42f4414e9ddb4055daac8ace445b810d44797e2",
+    "references_original.bib": "67ecc848a0cbb1038185dc670d5d1e8d3540799c0b32b7c15893d6345253434a",
+    "splncs04.bst": "f36c3a17e5304a692706359aafa9de709395a085e579eb47c027095aeaa35174",
+    "TARGETED_CHANGES.md": "aaaa0eb60cf54fb3adeea68856ca1de97f1a71a79e668a4fef3436b29089cc9a"
+  }
+}

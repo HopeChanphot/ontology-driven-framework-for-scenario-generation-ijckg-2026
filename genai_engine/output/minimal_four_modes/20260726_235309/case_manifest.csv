@@ -1,0 +1,2 @@
+﻿case_id,case_set_id,group_id,group_index,case_index,role,channel,variant,difficulty_condition,stage_id,macro_stage,micro_stage,stage_index,difficulty_band,age_group_code,age_group_label,retrieval_mode,language_mode,modes_to_compare,rationale
+SINGLE-001,single_cli_selection,SINGLE_HR_email_fake,1,1,HR,email,fake,cli_selected,BEGINNER_INTRODUCTORY,Beginner,Introductory,1,easy,22_35,22–35,ENGLISH_GLOBAL,en,"['prompt_only', 'prompt_rag', 'ontology_prompt_rag', 'ontology_text_rag']",Single CLI-selected generation case.

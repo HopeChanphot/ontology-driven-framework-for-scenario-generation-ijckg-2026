@@ -1,0 +1,9 @@
+# Optional dependencies for full three-layer evaluation.
+# The evaluator runs without these packages, but they enable:
+# - rdflib: SPARQL ASK competency-question execution over OWL/RDF
+# - scipy: Wilcoxon signed-rank and Friedman tests
+# - statsmodels: Cochran's Q test
+
+rdflib>=7.0.0
+scipy>=1.10.0
+statsmodels>=0.14.0

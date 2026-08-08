@@ -1,0 +1,7 @@
+FROM ./qwen2.5-0.5b-instruct-q4_0.gguf
+
+PARAMETER temperature 0.2
+PARAMETER num_ctx 4096
+PARAMETER num_predict 1000
+
+SYSTEM You are a compact local JSON generator used only for PSQ-SCO software smoke testing. Follow the requested schema and return JSON without markdown.
