@@ -12,6 +12,7 @@ Start with `START_HERE_PSQ_SCO_HANDOVER.docx`. For detailed setup, file location
 
 - `ontology/` - authoritative PSQ-SCO v9.1 OWL file, SPARQL competency questions, knowledge-graph exports, bindings, validation scripts, and final validation evidence.
 - `genai_engine/` - generation/evaluation source code, tests, configuration, selected technical documentation, compact evaluation summaries, targeted repair code, and latest IJCKG manuscript source/PDF.
+- [Paper experiment records](data/paper120_live/) - public copies of the 1,440 evaluated scenarios from live model calls, grouped by model and generation mode.
 - `internship/` - final internship report, ten dated weekly slide PDFs, and the small report-build source set.
 - `HOW_TO_USE_RUN_AND_REPRODUCE_PSQ_SCO.docx` - complete continuation guide: what each important file does, where it is, how to run and develop the code, and how to reproduce the smoke and paper-level experiment designs.
 - `DATA_AVAILABILITY.md` - what data is included, why unverified third-party corpora are not published, and how to rebuild an authorized RAG corpus.
@@ -100,6 +101,20 @@ For live local-model generation, start Ollama with one of the supported models, 
 
 Use `-SkipRag` only for a dependency-isolation check. For API-based development, copy `genai_engine/.env.example` to `genai_engine/.env` and add credentials locally. Never commit or redistribute `.env`.
 
+## Replay the IJCKG 2026 paper evaluation
+
+The study used [120 frozen input cases](genai_engine/configs/psq_sco_paper_120_cases.json), three models, and four generation modes. The [English output records](data/paper120_live/scenarios/) retain the saved case, model, and provenance information alongside the evaluated scenario fields. The [manifest](data/paper120_live/manifest.json) records the checksums for the 12 files.
+
+Run from the repository root with Python 3.10 or later.
+
+```bash
+python tools/replay_live_evaluation.py
+```
+
+This replays technical scores and recomputes the paper's method-conditioned F1 and equal-weight OCI from the saved lexical counts. The [data availability notes](DATA_AVAILABILITY.md#full-paper-experiment) explain the publication scope.
+
+In the four-mode portability example, `dry_run: true` uses a deterministic template and makes zero model calls. The 1,440 paper records have `used_live_llm: true` and `used_fallback: false`. The evaluator separately identified 318 records that received schema repairs after the live call.
+
 ## Fast validation
 
 Run the ontology competency questions and ASK validation:
@@ -139,7 +154,7 @@ Pop-Location
 ## Continuation priorities
 
 1. Put this folder under version control and add an explicit project license after confirming ownership and institutional requirements.
-2. Reacquire or regenerate the excluded frozen JSONL records before claiming exact end-to-end replication.
+2. Restore the original output archive for metrics that require complete scenario text. Give each fresh generation run its own identifier.
 3. Replace machine-specific paths that remain only in historical documentation or frozen provenance records; do not rewrite frozen evidence.
 4. Run a preregistered human evaluation with cybersecurity and serious-game reviewers.
 5. Add CI for ontology CQs, Python tests, schema validation, secret scanning, and checksum verification.
