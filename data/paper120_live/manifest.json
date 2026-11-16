@@ -118,5 +118,7 @@
       "original_sha256": "87621dfaca998777cb0ba22fc7109b5b89be1cc5c7fc4dafb118d71b8fa44d85",
       "public_sha256": "c684d270d6f243ad98c3e707f4a64a0345d1f1ad66b5dd29971eb1d19f607a97"
     }
-  ]
+  ],
+  "public_ontology_sha256": "f62425244cc7170c7239979c56cfe7df6fdcf3bb0f859d3c1ad33cd03cc6a3c4",
+  "ontology_release_note": "The public copy removes unavailable data-path assertions and replaces author-machine document paths with archive identifiers. Original evaluation hashes are retained."
 }

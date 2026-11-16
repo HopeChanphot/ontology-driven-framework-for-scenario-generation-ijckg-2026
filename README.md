@@ -8,6 +8,13 @@ This repository is the public continuation snapshot prepared from the internship
 
 Start with `START_HERE_PSQ_SCO_HANDOVER.docx`. For detailed setup, file locations, code architecture, four-mode execution, evaluation, troubleshooting, and experiment reproduction, use `HOW_TO_USE_RUN_AND_REPRODUCE_PSQ_SCO.docx`. The complete research report is in `internship/report/`.
 
+## Ontology and source documentation
+
+Read the [ontology structure and dataset provenance guide](docs/ONTOLOGY_AND_SOURCES.md) first. The [complete OWL reference](docs/ONTOLOGY_REFERENCE.md) lists every class, property and named individual. The ontology is at `ontology/ontology/personashield-psq-sco-v9.1.owl` and its CQ files are in `ontology/queries/v9_1/`. Restricted datasets such as DS_ThaiFraudSMS are represented by identifiers; the raw workbook is not a runtime dependency of the public workflows.
+
+The current README and launcher scripts take precedence over archived handover documents, reports and slides for setup and reproduction. Historical evidence references identify archived inputs, not files that must be present on a new computer.
+Some archived Word documents retain printed historical workstation paths. They are not active setup guides and are not read by the checks below.
+
 ## Package map
 
 - `ontology/` - authoritative PSQ-SCO v9.1 OWL file, SPARQL competency questions, knowledge-graph exports, bindings, validation scripts, and final validation evidence.
@@ -26,6 +33,17 @@ Start with `START_HERE_PSQ_SCO_HANDOVER.docx`. For detailed setup, file location
 ## First setup
 
 Requirements: Windows PowerShell, Python 3.10+, and about 100 MB for the minimal environment. Java plus a HermiT JAR is optional because the verified HermiT report is already included.
+
+Check the extracted package from any folder. These commands do not start a model:
+
+```text
+python tools/package_integrity.py verify
+python tools/check_release_paths.py
+python tools/ontology_reference.py --check
+python tools/replay_live_evaluation.py
+```
+
+After installing the minimal requirements, run `python tools/check_ontology_queries.py` to verify the four SELECT queries and eight ASK assertions from the packaged OWL.
 
 From the extracted package root in PowerShell:
 
@@ -82,6 +100,8 @@ Run one matched case through all four research conditions:
 ```powershell
 .\RUN_4_MODES_MINIMAL.ps1 -PythonExe $py
 ```
+
+Fresh smoke outputs go to `.psq_runs/`. The historical example outputs and release checksums are not overwritten by these runs.
 
 This default is an offline, schema-safe dry run. It exercises `prompt_only`, `prompt_rag`, `ontology_prompt_rag`, and `ontology_text_rag`; the RAG modes use the included one-record lexical knowledge base, so Chroma, model downloads, and credentials are unnecessary.
 

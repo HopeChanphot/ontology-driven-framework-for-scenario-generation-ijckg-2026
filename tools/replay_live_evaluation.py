@@ -75,9 +75,9 @@ def main() -> None:
     if sha256(cases_path) != manifest["frozen_case_manifest_sha256"]:
         raise ValueError("frozen case manifest checksum mismatch")
     ontology_hash = sha256(ontology_path)
-    if ontology_hash != original_hashes[ontology_path.name]:
-        raise ValueError("ontology differs from the archived evaluator input")
-    if ontology_hash != manifest["ontology_sha256"]:
+    if original_hashes[ontology_path.name] != manifest["ontology_sha256"]:
+        raise ValueError("original ontology checksums do not match")
+    if ontology_hash != manifest.get("public_ontology_sha256", manifest["ontology_sha256"]):
         raise ValueError("public ontology checksum mismatch")
 
     cases = {row["case_id"]: row for row in read_json(cases_path)["cases"]}
